@@ -6,7 +6,7 @@ import sys
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 
-class SmallSMILHandler(ContentHandler):
+class XMLHandler(ContentHandler):
 
     def __init__(self):
 
