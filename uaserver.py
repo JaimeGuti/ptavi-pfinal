@@ -33,10 +33,10 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             aEjecutar += receptor_Puerto + " < " + AUDIO
             print("Vamos a ejecutar", aEjecutar)
             os.system(aEjecutar)
-"""
+
         elif line == "BYE":
             self.wfile.write(b"SIP/2.0 200 OK")
-
+"""
         elif line == ""
             #Usuario se intenta registrar sin autenticarse
             self.wfile.write(b"SIP/2.0 401 Unauthorized")
