@@ -64,9 +64,16 @@ class XMLHandler(ContentHandler):
 
         return self.tags
 
+def log_fich(lfich, fecha, evento):
+    fich = open(lfich, 'a')
+    fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time))
+    evento = fecha + "Evento" # Hay que añadir los eventos
+    fich.write(evento)
+    fich.close()
+
 try:
     CONFIG = sys.argv[1]
-    METODO = sys.argv[2].upper()
+    METHOD = sys.argv[2].upper()
     OPTION = int(sys.argv[3])
 except:
     sys.exit("Usage: python uaclient.py config method option")
