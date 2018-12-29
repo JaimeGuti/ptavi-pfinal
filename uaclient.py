@@ -5,6 +5,7 @@ import socket
 import sys
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
+import time
 
 class XMLHandler(ContentHandler):
 
@@ -66,8 +67,8 @@ class XMLHandler(ContentHandler):
 
 def log_fich(lfich, fecha, evento):
     fich = open(lfich, 'a')
-    fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time))
-    evento = fecha + "Evento" # Hay que añadir los eventos
+    fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+    evento = fecha + " " + evento
     fich.write(evento)
     fich.close()
 
@@ -82,15 +83,20 @@ config_fich = open(CONFIG, 'r')
 line = config_fich.readlines()
 config_fich.close()
 
-"""
+lfich = "ua1log.txt"
+
 # Contenido que vamos a enviar
-LINE = METODO + " sip:" + RECEPTOR + "@" + IP + " SIP/2.0\r\n\r\n"
+# LINE = METODO + " sip:" + RECEPTOR + "@" + IP + " SIP/2.0\r\n\r\n"
 
 # Creamos el socket, lo configuramos y lo atamos a un servidor/puerto
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
     my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    my_socket.connect((IP, SIPPORT))
+    my_socket.connect(('localhost', 5555))
 
+    evento = "Starting"
+    fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+    log_fich(lfich,fecha,evento)
+"""
     if METODO == "INVITE":
         print("Enviando: " + LINE)
         my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
