@@ -83,7 +83,9 @@ config_fich = open(CONFIG, 'r')
 line = config_fich.readlines()
 config_fich.close()
 
-lfich = "ua1log.txt"
+
+lfich = line[7].split('path="')[1].split('"')[0]
+print(lfich)
 
 # Contenido que vamos a enviar
 # LINE = METODO + " sip:" + RECEPTOR + "@" + IP + " SIP/2.0\r\n\r\n"
@@ -93,7 +95,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
     my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     my_socket.connect(('localhost', 5555))
 
-    evento = "Starting"
+    evento = "Starting..."
     fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
     log_fich(lfich,fecha,evento)
 """
