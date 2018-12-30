@@ -12,7 +12,7 @@ class XMLHandler(ContentHandler):
     def __init__(self):
 
         self.attrs = []
-        self.tags = []
+        self.tags = {}
 
     def startElement(self, name, attrs):
 
@@ -22,7 +22,7 @@ class XMLHandler(ContentHandler):
             acc['username'] = attrs.get('username', "")
             acc['passwd'] = attrs.get('passwd', "")
 
-            self.tags.append(['account', acc])
+            self.tags['account'] = acc
 
         elif name == 'uaserver':
 
@@ -30,14 +30,14 @@ class XMLHandler(ContentHandler):
             uas['ip'] = attrs.get('ip', "")
             uas['puerto'] = attrs.get('puerto', "")
 
-            self.tags.append(['uaserver', uas])
+            self.tags['uaserver'] = uas
 
         elif name == 'rtpaudio':
 
             rtp = {}
             rtp['puerto'] = attrs.get('puerto', "")
 
-            self.tags.append(['rtpaudio', rtp])
+            self.tags['rtpaudio'] = rtp
 
         elif name == 'regproxy':
 
@@ -45,25 +45,26 @@ class XMLHandler(ContentHandler):
             regp['ip'] = attrs.get('ip', "")
             regp['puerto'] = attrs.get('puerto', "")
 
-            self.tags.append(['regproxy', regp])
+            self.tags['regproxy'] = regp
 
         elif name == 'log':
 
             lg = {}
             lg['path'] = attrs.get('path', "")
 
-            self.tags.append(['log', lg])
+            self.tags['log'] = lg
 
         elif name == 'audio':
 
             aud = {}
             aud['path'] = attrs.get('path', "")
 
-            self.tags.append(['audio', aud])
+            self.tags['audio'] = aud
 
     def get_tags(self):
 
         return self.tags
+        
 
 def log_fich(lfich, fecha, evento):
     fich = open(lfich, 'a')
@@ -83,8 +84,19 @@ config_fich = open(CONFIG, 'r')
 line = config_fich.readlines()
 config_fich.close()
 
+parser = make_parser()
+cHandler = XMLHandler()
+parser.setContentHandler(cHandler)
+parser.parse(open(CONFIG))
+config_xml = cHandler.get_tags()
 
-lfich = line[7].split('path="')[1].split('"')[0]
+IP_REGPROXY = config_xml['regproxy']['ip']
+PORT_REGPROXY = config_xml['regproxy']['puerto']
+
+lfich = config_xml['log']['path']
+
+print(IP_REGPROXY)
+print(PORT_REGPROXY)
 print(lfich)
 
 # Contenido que vamos a enviar
@@ -93,7 +105,7 @@ print(lfich)
 # Creamos el socket, lo configuramos y lo atamos a un servidor/puerto
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
     my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    my_socket.connect(('localhost', 5555))
+    my_socket.connect((IP_REGPROXY, int(PORT_REGPROXY)))
 
     evento = "Starting..."
     fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
