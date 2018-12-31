@@ -64,7 +64,7 @@ class XMLHandler(ContentHandler):
     def get_tags(self):
 
         return self.tags
-        
+
 
 def log_fich(lfich, fecha, evento):
     fich = open(lfich, 'a')
@@ -90,36 +90,57 @@ parser.setContentHandler(cHandler)
 parser.parse(open(CONFIG))
 config_xml = cHandler.get_tags()
 
+USER = config_xml['account']['username']
+PASSWORD = config_xml['account']['passwd']
+IP_SERVER = config_xml['uaserver']['ip']
+PORT_SERVER = config_xml['uaserver']['puerto']
+PORT_RTPAUDIO = config_xml['rtpaudio']['puerto']
 IP_REGPROXY = config_xml['regproxy']['ip']
 PORT_REGPROXY = config_xml['regproxy']['puerto']
-
-lfich = config_xml['log']['path']
-
-print(IP_REGPROXY)
-print(PORT_REGPROXY)
-print(lfich)
+LOGFICH = config_xml['log']['path']
+AUDIO_SONG = config_xml['audio']['path']
 
 # Contenido que vamos a enviar
-# LINE = METODO + " sip:" + RECEPTOR + "@" + IP + " SIP/2.0\r\n\r\n"
+# LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
+
+
+evento = "Starting..." + "\r\n\r\n"
+fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+log_fich(LOGFICH,fecha,evento)
 
 # Creamos el socket, lo configuramos y lo atamos a un servidor/puerto
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
     my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     my_socket.connect((IP_REGPROXY, int(PORT_REGPROXY)))
 
-    evento = "Starting..."
-    fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-    log_fich(lfich,fecha,evento)
-"""
-    if METODO == "INVITE":
-        print("Enviando: " + LINE)
+    if METHOD == "REGISTER":
+        LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
         my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
         data = my_socket.recv(1024)
+        evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+        # 200 OK
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH, fecha, evento)
 
-    elif METODO == "BYE":
-        print("Enviando: " + LINE)
+    elif METHOD == "INVITE":
+        LINE = METHOD + " " + USER + "\r\n\r\n"
+        my_socket.send(bytes(METHOD, 'utf-8') + b'\r\n')
+        data = my_socket.recv(1024)
+        evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH,fecha,evento)
+
+    elif METHOD == "BYE":
+        LINE = METHOD + "\r\n\r\n"
         my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
         data = my_socket.recv(1024)
+        evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+        # 200 OK
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH, fecha, evento)
+        evento = "Finishing." + "\r\n\r\n"
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH, fecha, evento)
 
     mens_ack = data.decode('utf-8')
     if mens_ack == "SIP/2.0 100 Trying SIP/2.0 180 Ringing SIP/2.0 200 OK":
@@ -133,4 +154,3 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
     print("Terminando socket...")
 
 print("Fin.")
-"""

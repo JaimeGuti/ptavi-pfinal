@@ -1,1 +1,18 @@
-20181230021346 Starting...
+20181231002747 Starting...
+
+20181231002747 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20181231002747 Finishing.
+
+20181231002750 Starting...
+
+20181231002750 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20181231002750 Finishing.
+
+20181231002752 Starting...
+
+20181231002752 Sent to 127.0.0.1:5555: BYE
+
+20181231002752 Finishing.
+
