@@ -103,22 +103,25 @@ AUDIO_SONG = config_xml['audio']['path']
 # Contenido que vamos a enviar
 # LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
 
-
-evento = "Starting..." + "\r\n\r\n"
-fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-log_fich(LOGFICH,fecha,evento)
-
 # Creamos el socket, lo configuramos y lo atamos a un servidor/puerto
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
     my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     my_socket.connect((IP_REGPROXY, int(PORT_REGPROXY)))
 
     if METHOD == "REGISTER":
+        evento = "Starting..." + "\r\n\r\n"
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH,fecha,evento)
+
         LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
         my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
         data = my_socket.recv(1024)
         evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-        # 200 OK
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH, fecha, evento)
+
+        evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+        evento += data.decode('utf-8') + "\r\n\r\n"
         fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
         log_fich(LOGFICH, fecha, evento)
 
@@ -135,9 +138,14 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
         my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
         data = my_socket.recv(1024)
         evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-        # 200 OK
         fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
         log_fich(LOGFICH, fecha, evento)
+
+        evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+        evento += data.decode('utf-8') + "\r\n\r\n"
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH, fecha, evento)
+        
         evento = "Finishing." + "\r\n\r\n"
         fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
         log_fich(LOGFICH, fecha, evento)
