@@ -36,3 +36,89 @@
 
 20190103115336 Finishing.
 
+20190103115854 Starting...
+
+20190103125916 Starting...
+
+20190103125916 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103125916 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103125920 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190103125955 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190103130117 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190103130120 Starting...
+
+20190103130120 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103130120 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103130122 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190103130133 Sent to 127.0.0.1:5555: BYE
+
+20190103130133 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+
+20190103130133 Finishing.
+
+20190103130252 Starting...
+
+20190103130252 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103130252 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103130356 Starting...
+
+20190103130356 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103130356 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103130358 Sent to 127.0.0.1:5555: BYE
+
+20190103130358 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+
+20190103130358 Finishing.
+
+20190103130401 Sent to 127.0.0.1:5555: BYE
+
+20190103130401 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+
+20190103130401 Finishing.
+
+20190103130427 Starting...
+
+20190103130427 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103130427 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103130439 Starting...
+
+20190103130439 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103130439 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103130446 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190103130451 Sent to 127.0.0.1:5555: BYE
+
+20190103130451 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+
+20190103130451 Finishing.
+
+20190103130732 Starting...
+
+20190103130732 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103130732 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103130737 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190103130740 Sent to 127.0.0.1:5555: BYE
+
+20190103130740 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+
+20190103130740 Finishing.
+

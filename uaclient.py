@@ -76,7 +76,7 @@ def log_fich(lfich, fecha, evento):
 try:
     CONFIG = sys.argv[1]
     METHOD = sys.argv[2].upper()
-    OPTION = int(sys.argv[3])
+    OPTION = sys.argv[3]
 except:
     sys.exit("Usage: python uaclient.py config method option")
 
@@ -118,6 +118,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
             LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
             my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
             data = my_socket.recv(1024)
+
             evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
             fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
@@ -132,14 +133,23 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
             LINE = METHOD + " " + USER + "\r\n\r\n"
             my_socket.send(bytes(METHOD, 'utf-8') + b'\r\n')
             data = my_socket.recv(1024)
+
             evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
             fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
             log_fich(LOGFICH,fecha,evento)
+
+            session = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
+            session += "Content-Type: application/sdp\r\n\r\n" + "v=0\r\n"
+            session += "o=" + USER + " " + IP_SERVER + "\r\n"
+            session += "s=misesion\r\n" + "t=0\r\n" + "m=audio "
+            session += PORT_RTPAUDIO + " RTP\r\n"
+            print(session)
 
         elif METHOD == "BYE":
             LINE = METHOD + "\r\n\r\n"
             my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
             data = my_socket.recv(1024)
+
             evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
             fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
