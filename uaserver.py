@@ -14,6 +14,7 @@ except:
     sys.exit("Usage: python uaserver.py config")
 
 
+
 class EchoHandler(socketserver.DatagramRequestHandler):
 
     def handle(self):
@@ -54,8 +55,25 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             self.wfile.write(b"SIP/2.0 400 Bad Request\r\n")
 
 if __name__ == "__main__":
+
+    parser = make_parser()
+    cHandler = XMLHandler()
+    parser.setContentHandler(cHandler)
+    parser.parse(open(CONFIG))
+    config_xml = cHandler.get_tags()
+
+    USER = config_xml['account']['username']
+    PASSWORD = config_xml['account']['passwd']
+    IP_SERVER = config_xml['uaserver']['ip']
+    PORT_SERVER = config_xml['uaserver']['puerto']
+    PORT_RTPAUDIO = config_xml['rtpaudio']['puerto']
+    IP_REGPROXY = config_xml['regproxy']['ip']
+    PORT_REGPROXY = config_xml['regproxy']['puerto']
+    LOGFICH = config_xml['log']['path']
+    AUDIO = config_xml['audio']['path']
+
     # Creamos servidor de eco y escuchamos
-    serv = socketserver.UDPServer(('', PORT), EchoHandler)
+    serv = socketserver.UDPServer(('', 5555), EchoHandler)
     print("Listening...")
     try:
         serv.serve_forever()
