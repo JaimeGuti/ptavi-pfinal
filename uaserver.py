@@ -6,7 +6,7 @@ import sys
 import os
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
-import XMLHandler
+from uaclient import XMLHandler
 
 try:
     CONFIG = sys.argv[1]
@@ -38,17 +38,19 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             self.wfile.write(b"SIP/2.0 200 OK\r\n")
 
 #        elif line == ""
-            #Usuario se intenta registrar sin autenticarse
+            # Usuario se intenta registrar sin autenticarse
 #            self.wfile.write(b"SIP/2.0 401 Unauthorized")
 
 #        elif line == ""
-            #Usuario no encontrado en el servidor de registro
+            # Usuario no encontrado en el servidor de registro
 #            self.wfile.write(b"SIP/2.0 404 User Not Found")
 
         elif diferente:
+            # Petición de otro método diferente a los descritos
             self.wfile.write(b"SIP/2.0 405 Method Not Allowed\r\n")
 
         else:
+            # Si la petición está mal formada
             self.wfile.write(b"SIP/2.0 400 Bad Request\r\n")
 
 if __name__ == "__main__":
