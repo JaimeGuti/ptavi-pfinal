@@ -36,15 +36,15 @@ class EchoHandler(socketserver.DatagramRequestHandler):
 
         elif line == "BYE":
             self.wfile.write(b"SIP/2.0 200 OK")
-"""
-        elif line == ""
-            #Usuario se intenta registrar sin autenticarse
-            self.wfile.write(b"SIP/2.0 401 Unauthorized")
 
-        elif line == ""
+#        elif line == ""
+            #Usuario se intenta registrar sin autenticarse
+#            self.wfile.write(b"SIP/2.0 401 Unauthorized")
+
+#        elif line == ""
             #Usuario no encontrado en el servidor de registro
-            self.wfile.write(b"SIP/2.0 404 User Not Found")
-"""
+#            self.wfile.write(b"SIP/2.0 404 User Not Found")
+
         elif diferente:
             self.wfile.write(b"SIP/2.0 405 Method Not Allowed")
 

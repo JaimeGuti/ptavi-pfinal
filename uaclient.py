@@ -108,47 +108,57 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
     my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     my_socket.connect((IP_REGPROXY, int(PORT_REGPROXY)))
 
-    if METHOD == "REGISTER":
-        evento = "Starting..." + "\r\n\r\n"
-        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-        log_fich(LOGFICH,fecha,evento)
+    try:
+        if METHOD == "REGISTER":
 
-        LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
-        my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
-        data = my_socket.recv(1024)
-        evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+            evento = "Starting..." + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH,fecha,evento)
+
+            LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
+            my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
+            data = my_socket.recv(1024)
+            evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+            evento += ": " + data.decode('utf-8') + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
+        elif METHOD == "INVITE":
+
+            LINE = METHOD + " " + USER + "\r\n\r\n"
+            my_socket.send(bytes(METHOD, 'utf-8') + b'\r\n')
+            data = my_socket.recv(1024)
+            evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH,fecha,evento)
+
+        elif METHOD == "BYE":
+            LINE = METHOD + "\r\n\r\n"
+            my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
+            data = my_socket.recv(1024)
+            evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+            evento += data.decode('utf-8') + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
+            evento = "Finishing." + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+    except:
+        wrong_connection = IP_REGPROXY + " port " + PORT_REGPROXY
+        sys.exit("Error: No server listening at " + wrong_connection)
+        evento = "Error: No server listening at " + wrong_connection
         fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
         log_fich(LOGFICH, fecha, evento)
 
-        evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-        evento += data.decode('utf-8') + "\r\n\r\n"
-        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-        log_fich(LOGFICH, fecha, evento)
-
-    elif METHOD == "INVITE":
-        LINE = METHOD + " " + USER + "\r\n\r\n"
-        my_socket.send(bytes(METHOD, 'utf-8') + b'\r\n')
-        data = my_socket.recv(1024)
-        evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-        log_fich(LOGFICH,fecha,evento)
-
-    elif METHOD == "BYE":
-        LINE = METHOD + "\r\n\r\n"
-        my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
-        data = my_socket.recv(1024)
-        evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-        log_fich(LOGFICH, fecha, evento)
-
-        evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-        evento += data.decode('utf-8') + "\r\n\r\n"
-        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-        log_fich(LOGFICH, fecha, evento)
-        
-        evento = "Finishing." + "\r\n\r\n"
-        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
-        log_fich(LOGFICH, fecha, evento)
 
     mens_ack = data.decode('utf-8')
     if mens_ack == "SIP/2.0 100 Trying SIP/2.0 180 Ringing SIP/2.0 200 OK":
