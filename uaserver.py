@@ -6,11 +6,10 @@ import sys
 import os
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
+import XMLHandler
 
 try:
-    IP = sys.argv[1]
-    PORT = int(sys.argv[2])
-    AUDIO = sys.argv[3]
+    CONFIG = sys.argv[1]
 except:
     sys.exit("Usage: python uaserver.py config")
 
@@ -24,18 +23,19 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         diferente = (line != "INVITE") or (line != "BYE") or (line != "ACK")
 
         if line == "INVITE":
-            self.wfile.write(b"SIP/2.0 100 Trying")
-            self.wfile.write(b" SIP/2.0 180 Ring")
-            self.wfile.write(b" SIP/2.0 200 OK")
+            self.wfile.write(b"SIP/2.0 100 Trying\r\n")
+            self.wfile.write(b" SIP/2.0 180 Ring\r\n")
+            self.wfile.write(b" SIP/2.0 200 OK\r\n")
 
         elif line == "ACK":
-            aEjecutar = "./mp32rtp -i " + receptor_IP + " -p "
-            aEjecutar += receptor_Puerto + " < " + AUDIO
+            # aEjecutar es un string con lo que se ha de ejecutar en la shell
+            aEjecutar = "./mp32rtp -i " + IP_REGPROXY + " -p "
+            aEjecutar += PORT_RTPAUDIO + " < " + AUDIO
             print("Vamos a ejecutar", aEjecutar)
             os.system(aEjecutar)
 
         elif line == "BYE":
-            self.wfile.write(b"SIP/2.0 200 OK")
+            self.wfile.write(b"SIP/2.0 200 OK\r\n")
 
 #        elif line == ""
             #Usuario se intenta registrar sin autenticarse
@@ -46,10 +46,10 @@ class EchoHandler(socketserver.DatagramRequestHandler):
 #            self.wfile.write(b"SIP/2.0 404 User Not Found")
 
         elif diferente:
-            self.wfile.write(b"SIP/2.0 405 Method Not Allowed")
+            self.wfile.write(b"SIP/2.0 405 Method Not Allowed\r\n")
 
         else:
-            self.wfile.write(b"SIP/2.0 400 Bad Request")
+            self.wfile.write(b"SIP/2.0 400 Bad Request\r\n")
 
 if __name__ == "__main__":
     # Creamos servidor de eco y escuchamos

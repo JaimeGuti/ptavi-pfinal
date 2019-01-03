@@ -98,7 +98,7 @@ PORT_RTPAUDIO = config_xml['rtpaudio']['puerto']
 IP_REGPROXY = config_xml['regproxy']['ip']
 PORT_REGPROXY = config_xml['regproxy']['puerto']
 LOGFICH = config_xml['log']['path']
-AUDIO_SONG = config_xml['audio']['path']
+AUDIO = config_xml['audio']['path']
 
 # Contenido que vamos a enviar
 # LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
@@ -131,8 +131,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
         elif METHOD == "INVITE":
 
             LINE = METHOD + " " + USER + "\r\n\r\n"
-            my_socket.send(bytes(METHOD, 'utf-8') + b'\r\n')
-            data = my_socket.recv(1024)
 
             evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
             fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
@@ -144,6 +142,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
             session += "s=misesion\r\n" + "t=0\r\n" + "m=audio "
             session += PORT_RTPAUDIO + " RTP\r\n"
             print(session)
+
+            my_socket.send(bytes(METHOD, 'utf-8') + b'\r\n')
+            data = my_socket.recv(1024)
 
         elif METHOD == "BYE":
             LINE = METHOD + "\r\n\r\n"

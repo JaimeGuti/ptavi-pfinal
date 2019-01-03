@@ -122,3 +122,11 @@
 
 20190103130740 Finishing.
 
+20190103133758 Starting...
+
+20190103133758 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190103133758 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+
+20190103133802 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
