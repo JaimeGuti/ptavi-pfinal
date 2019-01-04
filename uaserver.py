@@ -7,12 +7,13 @@ import os
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 from uaclient import XMLHandler
+import time
+from uaclient import log_fich
 
 try:
     CONFIG = sys.argv[1]
 except:
     sys.exit("Usage: python uaserver.py config")
-
 
 
 class EchoHandler(socketserver.DatagramRequestHandler):
@@ -24,18 +25,27 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         diferente = (line != "INVITE") or (line != "BYE") or (line != "ACK")
 
         if line == "INVITE":
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+            evento += line + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
             self.wfile.write(b"SIP/2.0 100 Trying\r\n")
             self.wfile.write(b" SIP/2.0 180 Ring\r\n")
             self.wfile.write(b" SIP/2.0 200 OK\r\n")
 
-            session = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
-            session += "Content-Type: application/sdp\r\n\r\n" + "v=0\r\n"
+            session = "Content-Type: application/sdp\r\n\r\n" + "v=0\r\n"
             session += "o=" + USER + " " + IP_SERVER + "\r\n"
             session += "s=misesion\r\n" + "t=0\r\n" + "m=audio "
             session += PORT_RTPAUDIO + " RTP\r\n"
             self.wfile.write(bytes(session, 'utf-8'))
 
         elif line == "ACK":
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+            evento += line + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
             # aEjecutar es un string con lo que se ha de ejecutar en la shell
             aEjecutar = "./mp32rtp -i " + IP_REGPROXY + " -p "
             aEjecutar += PORT_RTPAUDIO + " < " + AUDIO
@@ -43,7 +53,12 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             os.system(aEjecutar)
 
         elif line == "BYE":
-            self.wfile.write(b"SIP/2.0 200 OK\r\n")
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+            evento += line + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
+            self.wfile.write(b"SIP/2.0 200 OK")
 
 #        elif line == ""
             # Usuario se intenta registrar sin autenticarse
@@ -54,12 +69,22 @@ class EchoHandler(socketserver.DatagramRequestHandler):
 #            self.wfile.write(b"SIP/2.0 404 User Not Found")
 
         elif diferente:
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+            evento += line + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
             # Petición de otro método diferente a los descritos
-            self.wfile.write(b"SIP/2.0 405 Method Not Allowed\r\n")
+            self.wfile.write(b"SIP/2.0 405 Method Not Allowed")
 
         else:
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+            evento += line + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
             # Si la petición está mal formada
-            self.wfile.write(b"SIP/2.0 400 Bad Request\r\n")
+            self.wfile.write(b"SIP/2.0 400 Bad Request")
 
 if __name__ == "__main__":
 
@@ -86,3 +111,6 @@ if __name__ == "__main__":
         serv.serve_forever()
     except KeyboardInterrupt:
         print("Servidor apagado")
+        evento = "Servidor apagado\r\n"
+        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        log_fich(LOGFICH, fecha, evento)
