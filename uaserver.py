@@ -28,6 +28,13 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             self.wfile.write(b" SIP/2.0 180 Ring\r\n")
             self.wfile.write(b" SIP/2.0 200 OK\r\n")
 
+            session = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
+            session += "Content-Type: application/sdp\r\n\r\n" + "v=0\r\n"
+            session += "o=" + USER + " " + IP_SERVER + "\r\n"
+            session += "s=misesion\r\n" + "t=0\r\n" + "m=audio "
+            session += PORT_RTPAUDIO + " RTP\r\n"
+            self.wfile.write(bytes(session, 'utf-8'))
+
         elif line == "ACK":
             # aEjecutar es un string con lo que se ha de ejecutar en la shell
             aEjecutar = "./mp32rtp -i " + IP_REGPROXY + " -p "
@@ -73,7 +80,7 @@ if __name__ == "__main__":
     AUDIO = config_xml['audio']['path']
 
     # Creamos servidor de eco y escuchamos
-    serv = socketserver.UDPServer(('', 5555), EchoHandler)
+    serv = socketserver.UDPServer(('', int(PORT_SERVER)), EchoHandler)
     print("Listening...")
     try:
         serv.serve_forever()
