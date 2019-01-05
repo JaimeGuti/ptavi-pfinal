@@ -148,6 +148,7 @@ if __name__ == "__main__":
                 data = my_socket.recv(1024)
 
             elif METHOD == "BYE":
+                os.system('killall mp32rtp 2> /dev/null')
                 LINE = METHOD + "\r\n\r\n"
                 my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
