@@ -23,27 +23,27 @@ class PxReg_XMLHandler(ContentHandler):
 
         if name == 'server':
 
-            acc = {}
-            acc['name'] = attrs.get('name', "")
-            acc['ip'] = attrs.get('ip', "")
-            acc['puerto'] = attrs.get('puerto', "")
+            srv = {}
+            srv['name'] = attrs.get('name', "")
+            srv['ip'] = attrs.get('ip', "")
+            srv['puerto'] = attrs.get('puerto', "")
 
-            self.tags['account'] = acc
+            self.tags['server'] = srv
 
         elif name == 'database':
 
-            uas = {}
-            uas['path'] = attrs.get('path', "")
-            uas['passwdpath'] = attrs.get('passwdpath', "")
+            dtbs = {}
+            dtbs['path'] = attrs.get('path', "")
+            dtbs['passwdpath'] = attrs.get('passwdpath', "")
 
-            self.tags['uaserver'] = uas
+            self.tags['database'] = dtbs
 
         elif name == 'log':
 
-            rtp = {}
-            rtp['path'] = attrs.get('path', "")
+            lg = {}
+            lg['path'] = attrs.get('path', "")
 
-            self.tags['rtpaudio'] = rtp
+            self.tags['log'] = lg
 
     def get_tags(self):
 
