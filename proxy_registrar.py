@@ -10,6 +10,7 @@ from xml.sax.handler import ContentHandler
 from uaclient import XMLHandler
 import time
 from uaclient import log_fich
+import json
 
 
 class PxReg_XMLHandler(ContentHandler):
@@ -57,25 +58,8 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
     clients = {}
 
     def handle(self):
-
         self.json2registered()
-        self.wfile.write(b"SIP/2.0 200 OK\r\n\r\n")
-        line = self.rfile.read()
-        time_exp = float(line.decode('utf-8').split()[-1])
-        total_time = time.localtime(time.time() + time_exp)
-        tm = time.strftime('%Y-%m-%d %H:%M:%S', total_time)
-        info = {"address": self.client_address[0], "expires": tm}
-        if line.decode('utf-8').split(' ')[0] == 'REGISTER':
-            name_client = line.decode('utf-8').split(' ')[1][4:]
-            self.clients[name_client] = info
-            self.register2json()
-            if line.decode('utf-8').split(' ')[3][-1] == 'Expires':
-                expires = int(line.decode('utf-8').split(' ')[-1])
-                if str(expires) == '0':
-                    del self.clients[name_client]
-                    print(b"SIP/2.0 200 OK\r\n\r\n")
-        print(line.decode('utf-8'))
-        print(self.clients)
+        self.expired()
 
     def register2json(self):
         # Creación del fichero .json
@@ -90,12 +74,18 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
         except:
             self.register2json()
 
+    def expired(self):
+        tm = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()) + OPTION)
+        for clt in self.clients:
+            if sel.clients[clt][1] <= tm:
+                self.clients.remove(clt)
+
 
 if __name__ == "__main__":
 
     try:
         CONFIG = sys.argv[1]
-    except(IndexError, ValueError):
+    except:
         sys.exit("Usage: python proxy_registrar.py config")
 
     parser = make_parser()

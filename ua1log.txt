@@ -28,3 +28,20 @@
 20190105234311 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
 
 20190105234348 Servidor apagado
+20190106035705 Starting...
+
+20190106035705 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190106035705 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+
+
+
+20190106035732 Starting...
+
+20190106035732 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190106035732 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+
+
+
+20190106035743 Servidor apagado
