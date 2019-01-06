@@ -23,3 +23,8 @@
 
 20190105164944 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
 
+20190105234306 Starting...
+
+20190105234311 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190105234348 Servidor apagado

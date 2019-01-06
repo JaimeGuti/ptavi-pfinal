@@ -27,7 +27,7 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         if line == "INVITE":
             evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
             evento += line + "\r\n\r\n"
-            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
             self.wfile.write(b"SIP/2.0 100 Trying\r\n")
@@ -43,7 +43,7 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         elif line == "ACK":
             evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
             evento += line + "\r\n\r\n"
-            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
             # aEjecutar es un string con lo que se ha de ejecutar en la shell
@@ -55,7 +55,7 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         elif line == "BYE":
             evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
             evento += line + "\r\n\r\n"
-            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
             self.wfile.write(b"SIP/2.0 200 OK")
@@ -71,7 +71,7 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         elif diferente:
             evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
             evento += line + "\r\n\r\n"
-            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
             # Petición de otro método diferente a los descritos
@@ -80,7 +80,7 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         else:
             evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
             evento += line + "\r\n\r\n"
-            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
             # Si la petición está mal formada
@@ -112,5 +112,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("Servidor apagado")
         evento = "Servidor apagado\r\n"
-        fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+        fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
         log_fich(LOGFICH, fecha, evento)

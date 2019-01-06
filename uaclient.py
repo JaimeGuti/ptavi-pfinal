@@ -68,7 +68,7 @@ class XMLHandler(ContentHandler):
 
 def log_fich(lfich, fecha, evento):
     fich = open(lfich, 'a')
-    fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+    fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
     evento = fecha + " " + evento
     fich.write(evento)
     fich.close()
@@ -113,7 +113,7 @@ if __name__ == "__main__":
             if METHOD == "REGISTER":
 
                 evento = "Starting..." + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH,fecha,evento)
 
                 LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
@@ -121,12 +121,12 @@ if __name__ == "__main__":
                 data = my_socket.recv(1024)
 
                 evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-                fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
 
                 evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
                 evento += ": " + data.decode('utf-8') + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
 
             elif METHOD == "INVITE":
@@ -134,7 +134,7 @@ if __name__ == "__main__":
                 LINE = METHOD + " " + USER + "\r\n\r\n"
 
                 evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-                fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH,fecha,evento)
 
                 session = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
@@ -154,22 +154,22 @@ if __name__ == "__main__":
                 data = my_socket.recv(1024)
 
                 evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-                fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
 
                 evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
                 evento += data.decode('utf-8') + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
 
                 evento = "Finishing." + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
         except:
             wrong_connection = IP_REGPROXY + " port " + PORT_REGPROXY
             sys.exit("Error: No server listening at " + wrong_connection)
             evento = "Error: No server listening at " + wrong_connection
-            fecha = time.strftime('%Y%m%d%H%M%S', time.gmtime(time.time()))
+            fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
 
