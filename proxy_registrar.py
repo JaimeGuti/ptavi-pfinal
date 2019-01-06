@@ -61,6 +61,20 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
         self.json2registered()
         self.expired()
 
+        line = self.rfile.read()
+        method = line.decode('utf-8').split(' ')[0]
+
+        if method == "REGISTER":
+            print(method)
+            if len(self.clients) == 0 and not self.expired():
+                auth = 'WWW Authenticate: '
+                auth += 'Digest nonce="898989898798989898989"'
+                self.wfile.write(b"SIP/2.1 401 Unauthorized\r\n")
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
+                log_fich(LOG_PATH, fecha, auth)
+                print(auth)
+
     def register2json(self):
         # Creación del fichero .json
         json_file = open('registered.json', 'w')
@@ -75,7 +89,10 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
             self.register2json()
 
     def expired(self):
-        tm = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()) + OPTION)
+        #line = self.rfile.read()
+        #OPTION = line.decode('utf-8').split(' ')[3]
+        exp = time.localtime(time.time() + 3600)
+        tm = time.strftime('%Y%m%d%H%M%S', exp)
         for clt in self.clients:
             if sel.clients[clt][1] <= tm:
                 self.clients.remove(clt)
