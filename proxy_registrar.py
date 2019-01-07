@@ -65,6 +65,8 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
         line = self.rfile.read()
         method = line.decode('utf-8').split(' ')[0]
         OPTION = line.decode('utf-8').split(' ')[-1]
+        reg_client = line.decode('utf-8').split(':')[1]
+        print(reg_client)
 
         if method == "REGISTER":
             exptm = time.localtime(time.time() + int(OPTION))
@@ -74,13 +76,37 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                 auth = 'WWW Authenticate: '
                 auth += 'Digest nonce="' + rand_num + '"'
                 self.wfile.write(b"SIP/2.1 401 Unauthorized\r\n")
+                evento = "SIP/2.1 401 Unauthorized" + auth
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
-                log_fich(LOG_PATH, fecha, auth)
+                log_fich(LOG_PATH, fecha, evento)
                 print("OK 1") # Esto hay que quitarlo, es solo de comprobación
 
-            elif len(self.clients) != 0 and total_tm != 0:
+            elif len(self.clients) != 0 and total_exptm != 0:
+                reg_client = line.decode('utf-8').split(':')[1]
+                for username in self.clients:
+                    if username[0] != reg_client:
+                        rand_num = str(randint(1, 999999999999999999999))
+                        auth = 'WWW Authenticate: '
+                        auth += 'Digest nonce="' + rand_num + '"'
+                        self.wfile.write(b"SIP/2.1 401 Unauthorized\r\n")
+                        evento = "SIP/2.1 401 Unauthorized" + auth
+                        t = time.localtime(time.time())
+                        fecha = time.strftime('%Y%m%d%H%M%S', t)
+                        log_fich(LOG_PATH, fecha, evento)
+                    elif username[0] != reg_client:
+                        print("Ya está registrado") # COMPLETAR
+
                 print("OK 2") # Esto hay que quitarlo, es solo de comprobación
+
+            elif len(self.clients) != 0 and total_exptm == 0:
+                self.wfile.write(b"SIP/2.0 200 OK\r\n")
+                self.clients.remove(reg_client)
+                evento = reg_client + " eliminated"
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
+                log_fich(LOG_PATH, fecha, evento)
+                print("OK 3") # Esto hay que quitarlo, es solo de comprobación
 
     def register2json(self):
         # Creación del fichero .json
