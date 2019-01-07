@@ -90,12 +90,17 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                         auth = 'WWW Authenticate: '
                         auth += 'Digest nonce="' + rand_num + '"'
                         self.wfile.write(b"SIP/2.1 401 Unauthorized\r\n")
-                        evento = "SIP/2.1 401 Unauthorized" + auth
+                        evento = "SIP/2.1 401 Unauthorized\r\n" + auth
                         t = time.localtime(time.time())
                         fecha = time.strftime('%Y%m%d%H%M%S', t)
                         log_fich(LOG_PATH, fecha, evento)
                     elif username[0] != reg_client:
-                        print("Ya está registrado") # COMPLETAR
+                        self.wfile.write(b"SIP/2.0 200 OK\r\n")
+                        evento = "SIP/2.0 200 OK\r\n"
+                        evento += "This user is already registered"
+                        t = time.localtime(time.time())
+                        fecha = time.strftime('%Y%m%d%H%M%S', t)
+                        log_fich(LOG_PATH, fecha, evento)
 
                 print("OK 2") # Esto hay que quitarlo, es solo de comprobación
 
