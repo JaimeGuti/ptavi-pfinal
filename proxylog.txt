@@ -1,11 +1,5 @@
-20190106020131 Servidor Proxy/Registrar apagado
-20190106020413 Servidor Proxy/Registrar apagado
-20190106020420 Servidor Proxy/Registrar apagado
-20190106035728 Servidor Proxy/Registrar apagado
-20190106035739 Servidor Proxy/Registrar apagado
-20190106040203 Servidor Proxy/Registrar apagado
-20190106040246 Servidor Proxy/Registrar apagado
-20190106040310 Servidor Proxy/Registrar apagado
-20190106041002 Servidor Proxy/Registrar apagado
-20190106042809 Servidor Proxy/Registrar apagado
-20190106042845 Servidor Proxy/Registrar apagado
+20190107022345 Servidor Proxy/Registrar apagado
+20190107022422 Servidor Proxy/Registrar apagado
+20190107022445 WWW Authenticate: Digest nonce="898989898798989898989"20190107022450 Servidor Proxy/Registrar apagado
+20190107022610 Servidor Proxy/Registrar apagado
+20190107022630 WWW Authenticate: Digest nonce="861360121502313467827"20190107022637 Servidor Proxy/Registrar apagado

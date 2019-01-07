@@ -11,6 +11,7 @@ from uaclient import XMLHandler
 import time
 from uaclient import log_fich
 import json
+from random import randint
 
 
 class PxReg_XMLHandler(ContentHandler):
@@ -67,13 +68,14 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
         if method == "REGISTER":
             print(method)
             if len(self.clients) == 0 and not self.expired():
+                rand_num = str(randint(1, 999999999999999999999))
                 auth = 'WWW Authenticate: '
-                auth += 'Digest nonce="898989898798989898989"'
+                auth += 'Digest nonce="' + rand_num + '"'
                 self.wfile.write(b"SIP/2.1 401 Unauthorized\r\n")
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOG_PATH, fecha, auth)
-                print(auth)
+                print(auth) # Esto hay que quitarlo, es solo de comprobación
 
     def register2json(self):
         # Creación del fichero .json

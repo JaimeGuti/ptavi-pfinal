@@ -1,47 +1,26 @@
-20190104123020 Starting...
+20190107022418 Starting...
 
-20190104123020 Received from 127.0.0.1:5555: REGISTER
+20190107022418 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
 
-20190104123020 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190107022418 Received from 127.0.0.1:5555: 
 
-20190104123020 Received from 127.0.0.1:5555: SIP/2.0 405 Method Not Allowed
+20190107022445 Starting...
 
-20190104123022 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+20190107022445 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
 
-20190104123022 Received from 127.0.0.1:5555: INVITE
-
-20190104123024 Received from 127.0.0.1:5555: BYE
-
-20190104123024 Sent to 127.0.0.1:5555: BYE
-
-20190104123024 Received from 127.0.0.1:5555: SIP/2.0 200 OK
-
-20190104123024 Finishing.
-
-20190104123108 Servidor apagado
-20190105164934 Starting...
-
-20190105164944 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
-
-20190105234306 Starting...
-
-20190105234311 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
-
-20190105234348 Servidor apagado
-20190106035705 Starting...
-
-20190106035705 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
-
-20190106035705 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+20190107022445 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
 
 
+20190107022607 Starting...
 
-20190106035732 Starting...
+20190107022607 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
 
-20190106035732 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190107022607 Received from 127.0.0.1:5555: 
 
-20190106035732 Received from 127.0.0.1:5555: SIP/2.0 200 OK
+20190107022630 Starting...
+
+20190107022630 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107022630 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
 
 
-
-20190106035743 Servidor apagado
