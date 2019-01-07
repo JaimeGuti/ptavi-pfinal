@@ -116,11 +116,13 @@ if __name__ == "__main__":
                 fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH,fecha,evento)
 
+                expire = "Expires: " + OPTION
                 LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
-                my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
+                send_line = LINE + expire
+                my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
 
-                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
+                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + send_line
                 fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
 

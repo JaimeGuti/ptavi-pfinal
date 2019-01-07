@@ -64,10 +64,12 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
 
         line = self.rfile.read()
         method = line.decode('utf-8').split(' ')[0]
+        OPTION = line.decode('utf-8').split(' ')[-1]
 
         if method == "REGISTER":
-            print(method)
-            if len(self.clients) == 0 and not self.expired():
+            exptm = time.localtime(time.time() + int(OPTION))
+            total_exptm = time.strftime('%Y%m%d%H%M%S', exptm)
+            if len(self.clients) == 0 and total_exptm != 0:
                 rand_num = str(randint(1, 999999999999999999999))
                 auth = 'WWW Authenticate: '
                 auth += 'Digest nonce="' + rand_num + '"'
@@ -75,7 +77,10 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOG_PATH, fecha, auth)
-                print(auth) # Esto hay que quitarlo, es solo de comprobación
+                print("OK 1") # Esto hay que quitarlo, es solo de comprobación
+
+            elif len(self.clients) != 0 and total_tm != 0:
+                print("OK 2") # Esto hay que quitarlo, es solo de comprobación
 
     def register2json(self):
         # Creación del fichero .json
@@ -92,9 +97,9 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
 
     def expired(self):
         #line = self.rfile.read()
-        #OPTION = line.decode('utf-8').split(' ')[3]
-        exp = time.localtime(time.time() + 3600)
-        tm = time.strftime('%Y%m%d%H%M%S', exp)
+        #OPTION = line.decode('utf-8').split(' ')[-1]
+        exp = time.localtime(time.time())
+        exp_tm = time.strftime('%Y-%m-%d%H%M%S', exp)
         for clt in self.clients:
             if sel.clients[clt][1] <= tm:
                 self.clients.remove(clt)

@@ -24,3 +24,627 @@
 20190107022630 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
 
 
+20190107024932 Starting...
+
+20190107024932 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107024932 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107024943 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190107024948 Starting...
+
+20190107024948 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107024948 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107025036 Starting...
+
+20190107025036 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107025036 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107025038 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190107025047 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190107025114 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190107025122 Starting...
+
+20190107025122 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107025122 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107025139 Sent to 127.0.0.1:5555: INVITE leonard@bigbang.org
+
+20190107025149 Starting...
+
+20190107025149 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107025149 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107025216 Starting...
+
+20190107025216 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107025216 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107031705 Starting...
+
+20190107031705 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107031705 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107031739 Starting...
+
+20190107031739 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107031739 Received from 127.0.0.1:5555: 
+
+20190107031755 Starting...
+
+20190107031755 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107031755 Received from 127.0.0.1:5555: 
+
+20190107031801 Starting...
+
+20190107031801 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107031801 Received from 127.0.0.1:5555: 
+
+20190107033137 Starting...
+
+20190107033137 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033137 Received from 127.0.0.1:5555: 
+
+20190107033153 Starting...
+
+20190107033153 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033153 Received from 127.0.0.1:5555: 
+
+20190107033226 Starting...
+
+20190107033226 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033226 Received from 127.0.0.1:5555: 
+
+20190107033506 Starting...
+
+20190107033506 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033506 Received from 127.0.0.1:5555: 
+
+20190107033512 Starting...
+
+20190107033512 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033512 Received from 127.0.0.1:5555: 
+
+20190107033524 Starting...
+
+20190107033524 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033524 Received from 127.0.0.1:5555: 
+
+20190107033600 Starting...
+
+20190107033600 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033600 Received from 127.0.0.1:5555: 
+
+20190107033607 Starting...
+
+20190107033607 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033607 Received from 127.0.0.1:5555: 
+
+20190107033610 Starting...
+
+20190107033610 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033610 Received from 127.0.0.1:5555: 
+
+20190107033628 Starting...
+
+20190107033628 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033628 Received from 127.0.0.1:5555: 
+
+20190107033655 Starting...
+
+20190107033655 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033655 Received from 127.0.0.1:5555: 
+
+20190107033713 Starting...
+
+20190107033713 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033713 Received from 127.0.0.1:5555: 
+
+20190107033744 Starting...
+
+20190107033744 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033744 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107033759 Starting...
+
+20190107033759 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033759 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107033909 Starting...
+
+20190107033909 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033909 Received from 127.0.0.1:5555: 
+
+20190107033948 Starting...
+
+20190107033948 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107033948 Received from 127.0.0.1:5555: 
+
+20190107034058 Starting...
+
+20190107034058 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107034058 Received from 127.0.0.1:5555: 
+
+20190107034109 Starting...
+
+20190107034109 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107034109 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107034336 Starting...
+
+20190107034336 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107034336 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107034345 Starting...
+
+20190107034345 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+20190107034345 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107043701 Starting...
+
+20190107043701 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600r
+
+20190107043701 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107043726 Starting...
+
+20190107043726 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107043726 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107043755 Starting...
+20190107043755 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107043755 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107043936 Starting...
+
+20190107043936 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107043936 Received from 127.0.0.1:5555: 
+
+20190107044000 Starting...
+
+20190107044000 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044000 Received from 127.0.0.1:5555: 
+
+20190107044013 Starting...
+
+20190107044013 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044013 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044035 Starting...
+
+20190107044035 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044035 Received from 127.0.0.1:5555: 
+
+20190107044052 Starting...
+
+20190107044052 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044052 Received from 127.0.0.1:5555: 
+
+20190107044133 Starting...
+
+20190107044133 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044133 Received from 127.0.0.1:5555: 
+
+20190107044147 Starting...
+
+20190107044147 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044147 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044223 Starting...
+
+20190107044223 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044223 Received from 127.0.0.1:5555: 
+
+20190107044235 Starting...
+
+20190107044235 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044235 Received from 127.0.0.1:5555: 
+
+20190107044253 Starting...
+
+20190107044253 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044253 Received from 127.0.0.1:5555: 
+
+20190107044315 Starting...
+
+20190107044315 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044315 Received from 127.0.0.1:5555: 
+
+20190107044325 Starting...
+
+20190107044325 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044325 Received from 127.0.0.1:5555: 
+
+20190107044338 Starting...
+
+20190107044338 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044338 Received from 127.0.0.1:5555: 
+
+20190107044355 Starting...
+
+20190107044355 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044355 Received from 127.0.0.1:5555: 
+
+20190107044432 Starting...
+
+20190107044432 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044432 Received from 127.0.0.1:5555: 
+
+20190107044535 Starting...
+
+20190107044535 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044535 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044539 Starting...
+
+20190107044539 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044539 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044540 Starting...
+
+20190107044540 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044540 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044540 Starting...
+
+20190107044540 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044540 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044541 Starting...
+
+20190107044541 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044541 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044559 Starting...
+
+20190107044559 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044559 Received from 127.0.0.1:5555: 
+
+20190107044756 Starting...
+
+20190107044756 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044756 Received from 127.0.0.1:5555: 
+
+20190107044816 Starting...
+
+20190107044816 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 3600
+
+20190107044816 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044838 Starting...
+
+20190107044838 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107044838 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107044926 Starting...
+
+20190107044926 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107044926 Received from 127.0.0.1:5555: 
+
+20190107044938 Starting...
+
+20190107044938 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107044938 Received from 127.0.0.1:5555: 
+
+20190107044954 Starting...
+
+20190107044954 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107044954 Received from 127.0.0.1:5555: 
+
+20190107045014 Starting...
+
+20190107045014 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045014 Received from 127.0.0.1:5555: 
+
+20190107045017 Starting...
+
+20190107045017 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 020190107045017 Received from 127.0.0.1:5555: 
+
+20190107045039 Starting...
+
+20190107045039 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045039 Received from 127.0.0.1:5555: 
+
+20190107045109 Starting...
+
+20190107045109 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045109 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107045123 Starting...
+
+20190107045123 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045123 Received from 127.0.0.1:5555: 
+
+20190107045206 Starting...
+
+20190107045206 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045206 Received from 127.0.0.1:5555: 
+
+20190107045239 Starting...
+
+20190107045239 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045239 Received from 127.0.0.1:5555: 
+
+20190107045305 Starting...
+
+20190107045305 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045305 Received from 127.0.0.1:5555: 
+
+20190107045330 Starting...
+
+20190107045330 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045330 Received from 127.0.0.1:5555: 
+
+20190107045353 Starting...
+
+20190107045359 Starting...
+
+20190107045359 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045359 Received from 127.0.0.1:5555: 
+
+20190107045417 Starting...
+
+20190107045417 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045417 Received from 127.0.0.1:5555: 
+
+20190107045431 Starting...
+
+20190107045431 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045431 Received from 127.0.0.1:5555: 
+
+20190107045509 Starting...
+
+20190107045509 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045509 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107045535 Starting...
+
+20190107045535 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045535 Received from 127.0.0.1:5555: 
+
+20190107045609 Starting...
+
+20190107045609 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045609 Received from 127.0.0.1:5555: 
+
+20190107045621 Starting...
+
+20190107045621 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045621 Received from 127.0.0.1:5555: 
+
+20190107045641 Starting...
+
+20190107045641 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045641 Received from 127.0.0.1:5555: 
+
+20190107045653 Starting...
+
+20190107045653 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045653 Received from 127.0.0.1:5555: 
+
+20190107045658 Starting...
+
+20190107045658 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045658 Received from 127.0.0.1:5555: 
+
+20190107045713 Starting...
+
+20190107045713 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045713 Received from 127.0.0.1:5555: 
+
+20190107045730 Starting...
+
+20190107045740 Starting...
+
+20190107045740 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045740 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107045800 Starting...
+
+20190107045800 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107045800 Received from 127.0.0.1:5555: 
+
+20190107163841 Starting...
+
+20190107163841 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107163841 Received from 127.0.0.1:5555: 
+
+20190107163952 Starting...
+
+20190107163952 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107163952 Received from 127.0.0.1:5555: 
+
+20190107164339 Starting...
+
+20190107164339 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107164339 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107164518 Starting...
+
+20190107164518 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107164518 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107164837 Starting...
+
+20190107164837 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107164837 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
+20190107164844 Starting...
+
+20190107164844 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+
+Expires: 360020190107164844 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+
+
