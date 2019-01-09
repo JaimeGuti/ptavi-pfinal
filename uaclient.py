@@ -172,13 +172,15 @@ if __name__ == "__main__":
                 session += PORT_RTPAUDIO + " RTP\r\n"
                 print(session)
 
-                my_socket.send(bytes(METHOD, 'utf-8') + b'\r\n')
+                send_line = session + "\r\n"
+                my_socket.send(bytes(session, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
 
             elif METHOD == "BYE":
-                os.system('killall mp32rtp 2> /dev/null')
+                # os.system('killall mp32rtp 2> /dev/null')
                 LINE = METHOD + "\r\n\r\n"
-                my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
+                send_line = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
+                my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
 
                 evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE

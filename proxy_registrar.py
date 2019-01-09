@@ -57,7 +57,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
     """
     Echo server class, extraído de la práctica 4
     """
-    clients = {}
+    clients = []
     nonce_num = []
 
     def handle(self):
@@ -65,68 +65,96 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
 
         line = self.rfile.read()
         method = line.decode('utf-8').split(' ')[0]
-        OPTION = line.decode('utf-8').split(' ')[3].split('\r')[0]
-        exptm = time.localtime(time.time() + int(OPTION))
-        total_exptm = time.strftime('%Y%m%d%H%M%S', exptm)
-        #print(line.decode('utf-8').split()) # Esto hay que quitarlo, es solo de comprobación
         rand_num = str(randint(1, 999999999999999999999))
 
-        if method == "REGISTER" and len(line.decode('utf-8').split()) < 6:
-            auth = 'WWW Authenticate: '
-            auth += 'Digest nonce="' + rand_num + '"'
-            evento = " SIP/2.1 401 Unauthorized " + auth
-            self.wfile.write(bytes((evento), 'utf-8'))
-            t = time.localtime(time.time())
-            fecha = time.strftime('%Y%m%d%H%M%S', t)
-            log_fich(LOG_PATH, fecha, evento)
+        if method == "REGISTER":
 
-        elif method == "REGISTER" and len(line.decode('utf-8').split()) >= 6:
-            # Hay que comprobar la contraseña
-            fich_passw = open(DATABASE_PASSWD, 'r')
-            for line_pass in fich_passw.readlines():
-                reg_client = line.decode('utf-8').split(':')[1]
-                if len(reg_client) == len(line.split()[1][4:-6]):
-                    passwd = line.decode('utf-8').split(' ')[1][-5:]
-                    nonce_num = rand_num
-
-                    correct_pass = hashlib.md5()
-                    correct_pass.update(bytes(passwd, 'utf-8'))
-                    correct_pass.update(bytes(nonce_num, 'utf-8'))
-                    correct_pass = correct_pass.hexdigest()
-
-                    #Registrar usuario si la contraseña es correcta
-                    if correct_pass != line.decode('utf-8').split('=')[-1]:
-                        self.clients = []
-                        a = []
-                        self.a = line.decode('utf-8').split()
-                        self.clients.append(str(a))
-                        self.clients.append(total_exptm)
-                        #self.register2json()
-                        evento = reg_client + "is registered"
-                        self.wfile.write(bytes((evento), 'utf-8'))
-                        t = time.localtime(time.time())
-                        fecha = time.strftime('%Y%m%d%H%M%S', t)
-                        log_fich(LOG_PATH, fecha, evento)
-            self.register2json()
-            # Borra el usuario si expires es igual a 0
-            if int(line.decode('utf-8').split(' ')[3][:1]) == 0:
-                self.wfile.write(b"SIP/2.0 200 OK\r\n")
-                evento = "SIP/2.0 200 OK\r\n"
-                evento += "User " + reg_client
-                evento += " is removed"
+            if len(line.decode('utf-8').split()) < 6:
+                OPTION = line.decode('utf-8').split(' ')[3].split('\r')[0]
+                exptm = time.localtime(time.time() + int(OPTION))
+                total_exptm = time.strftime('%Y%m%d%H%M%S', exptm)
+                auth = 'WWW Authenticate: '
+                auth += 'Digest nonce="' + rand_num + '"'
+                evento = " SIP/2.1 401 Unauthorized " + auth
+                self.wfile.write(bytes((evento), 'utf-8'))
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOG_PATH, fecha, evento)
-                print("User " + reg_client + " is removed")
-                for username in self.clients:
-                    self.clients.remove(username)
-            self.register2json()
+
+            elif len(line.decode('utf-8').split()) >= 6:
+                OPTION = line.decode('utf-8').split(' ')[3].split('\r')[0]
+                exptm = time.localtime(time.time() + int(OPTION))
+                total_exptm = time.strftime('%Y%m%d%H%M%S', exptm)
+                # Hay que comprobar la contraseña
+                fich_passw = open(DATABASE_PASSWD, 'r')
+                for line_pass in fich_passw.readlines():
+                    reg_client = line.decode('utf-8').split(':')[1]
+                    if len(reg_client) == len(line.split()[1][4:-6]):
+                        passwd = line.decode('utf-8').split(' ')[1][-5:]
+                        nonce_num = rand_num
+
+                        correct_pass = hashlib.md5()
+                        correct_pass.update(bytes(passwd, 'utf-8'))
+                        correct_pass.update(bytes(nonce_num, 'utf-8'))
+                        correct_pass = correct_pass.hexdigest()
+
+                        #Registrar usuario si la contraseña es correcta
+                        if correct_pass != line.decode('utf-8').split('=')[-1]:
+                            self.clients = []
+                            a = []
+                            self.a = line.decode('utf-8').split()
+                            self.clients.append(str(a))
+                            self.clients.append(total_exptm)
+                            #self.register2json()
+                            evento = reg_client + " is registered\r\n"
+                            self.wfile.write(bytes((evento), 'utf-8'))
+                            t = time.localtime(time.time())
+                            fecha = time.strftime('%Y%m%d%H%M%S', t)
+                            log_fich(LOG_PATH, fecha, evento)
+                            exp = time.localtime(time.time() + int(OPTION))
+                            exp_tm = time.strftime('%Y-%m-%d%H%M%S', exp)
+                            ld = line.decode('utf-8')
+                            client_name = ld.split(' ')[1][4:-6]
+                            self.clients = [client_name,
+                                    {"ip": self.client_address[0],
+                                   "port":self.client_address[1],
+                                   "expires": exp_tm,
+                                   "register_time": fecha}]
+                            self.register2json()
+                # Borra el usuario si expires es igual a 0
+                if int(line.decode('utf-8').split(' ')[3][:1]) == 0:
+                    evento = "SIP/2.0 200 OK\r\n"
+                    evento += "User " + reg_client
+                    evento += " is removed"
+                    self.wfile.write(bytes((evento), 'utf-8'))
+                    t = time.localtime(time.time())
+                    fecha = time.strftime('%Y%m%d%H%M%S', t)
+                    log_fich(LOG_PATH, fecha, evento)
+                    print("User " + reg_client + " is removed")
+                    for username in self.clients:
+                        self.clients.remove(username)
+                        self.clients = []
+                        self.register2json()
+                # Comprobar si el usuario está ya registrado
+                if len(self.clients) != 0:
+                    reg_client = line.decode('utf-8').split(':')[1]
+                    for username in self.clients:
+                        if username == reg_client:
+                            self.wfile.write(b"SIP/2.0 200 OK\r\n")
+                            evento = "SIP/2.0 200 OK\r\n"
+                            evento += "User " + reg_client
+                            evento += " is already registered"
+                            t = time.localtime(time.time())
+                            fecha = time.strftime('%Y%m%d%H%M%S', t)
+                            log_fich(LOG_PATH, fecha, evento)
+                            print("User " + reg_client + " is already registered")
 
         elif method == "INVITE":
-            print(method)
+            self.json2registered()
 
         elif method == "BYE":
             print(method)
+            self.wfile.write(b"BYE\r\n")
 
         elif method == "ACK":
             print(method)
