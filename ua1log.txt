@@ -1,93 +1,604 @@
-20190107183324 Starting...
+20190109021222 Starting...
 
-20190107183324 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109021222 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-Expires: 360020190107183324 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109021222 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="471782640083848217270"
 
+20190109021222 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="471782640083848217270"
+20190109021222 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="05ecbf82be4b3182a27784f83fa93039"
+20190109021553 Starting...
 
-20190107183347 Starting...
+20190109021553 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-20190107183347 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109021553 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="444461054389741331004"
 
-Expires: 360020190107183347 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109021553 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="444461054389741331004"
+20190109021553 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="2397d03fc3f15a88a4dd31c7e61a4425"
+20190109021621 Starting...
 
+20190109021621 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-20190107183419 Starting...
+20190109021621 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="669383801603012844691"
 
-20190107183419 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109021621 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="669383801603012844691"
+20190109021621 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="d6753fdeb04b05bee21642085d5ae720"
+20190109021752 Starting...
 
-Expires: 360020190107183419 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109021752 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
+20190109021752 Received from 127.0.0.1:5555: 
 
-20190107183501 Starting...
+20190109021913 Starting...
 
-20190107183501 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109021913 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-Expires: 360020190107183501 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109021913 Received from 127.0.0.1:5555: 
 
+20190109021942 Starting...
 
-20190107183507 Starting...
+20190109021942 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-20190107183507 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109021942 Received from 127.0.0.1:5555: 
 
-Expires: 360020190107183507 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109021956 Starting...
 
+20190109021956 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-20190107183525 Starting...
+20190109021956 Received from 127.0.0.1:5555: 
 
-20190107183525 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022059 Starting...
 
-Expires: 360020190107183525 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022059 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
+20190109022059 Received from 127.0.0.1:5555: 
 
-20190107183545 Starting...
+20190109022136 Starting...
 
-20190107183545 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022136 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-Expires: 360020190107183545 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022136 Received from 127.0.0.1:5555: 
 
+20190109022214 Starting...
 
-20190107183615 Starting...
+20190109022214 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-20190107183615 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022214 Received from 127.0.0.1:5555: 
 
-Expires: 360020190107183615 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022245 Starting...
 
+20190109022245 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-20190107183650 Starting...
+20190109022245 Received from 127.0.0.1:5555: 
 
-20190107183650 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022313 Starting...
 
-Expires: 360020190107183650 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022313 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
+20190109022313 Received from 127.0.0.1:5555: 
 
-20190107183700 Starting...
+20190109022358 Starting...
 
-20190107183700 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022358 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
-Expires: 360020190107183700 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022358 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="331267770210422915703"
 
+20190109022358 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="331267770210422915703"
+20190109022358 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="e14f8c2a89d92b99cc44f9b99ddb206b"
+20190109022402 Starting...
 
-20190107183711 Starting...
+20190109022402 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
 
-20190107183711 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022402 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="523380711909400401281"
 
-Expires: 360020190107183711 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022402 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="523380711909400401281"
+20190109022402 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="d02e3059af47d0f185a27656b55ea963"
+20190109022441 Starting...
 
+20190109022441 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
 
-20190107183724 Starting...
+20190109022441 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="649742519610378819528"
 
-20190107183724 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022441 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="649742519610378819528"
+20190109022441 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="f58c9ac1aef85cb25ea7fca16a10bffe"
+20190109022518 Starting...
 
-Expires: 360020190107183724 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022518 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
+20190109022518 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="125385001432043272536"
 
-20190107183737 Starting...
+20190109022518 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="125385001432043272536"
+20190109022518 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="c1728b4771698f291cc90cf8bf4c68aa"
+20190109022520 Starting...
 
-20190107183740 Starting...
+20190109022520 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
 
-20190107183740 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+20190109022520 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="572963984368603685901"
 
-Expires: 360020190107183740 Received from 127.0.0.1:5555: SIP/2.1 401 Unauthorized
+20190109022520 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="572963984368603685901"
+20190109022520 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="14f5e5a1f6d34ba5ba992623bf4c16a1"
+20190109022539 Starting...
 
+20190109022539 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
 
+20190109022539 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="707143704513160019544"
+
+20190109022539 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="707143704513160019544"
+20190109022539 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="1a7412b3b9b0d4eedbe9ded6fce2c8c6"
+20190109022540 Starting...
+
+20190109022540 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109022540 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="358668852915240828727"
+
+20190109022540 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="358668852915240828727"
+20190109022540 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="32f9c4e297b093a5a0670b2c7d6d9dfd"
+20190109022913 Starting...
+
+20190109022913 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109022913 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="657188447483798760917"
+
+20190109022913 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="657188447483798760917"
+20190109022913 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="533c64a1f6411ac04dc47cb5720642d0"
+20190109022920 Starting...
+
+20190109022920 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109022920 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="114160887626828487020"
+
+20190109022920 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="114160887626828487020"
+20190109022920 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="ea8b5414cdec539f03703fdfa8244575"
+20190109022939 Starting...
+
+20190109022939 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109022939 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="949138987431340305894"
+
+20190109022939 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="949138987431340305894"
+20190109022939 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="f319d40e70241f9c270ddc35cbe0f1a8"
+20190109022949 Starting...
+
+20190109022949 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109022949 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="480022947197279605373"
+
+20190109022949 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="480022947197279605373"
+20190109022949 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="b0879f5d9092baf513ea3955a1b9170e"
+20190109023037 Starting...
+
+20190109023037 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109023037 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="206895649195303955496"
+
+20190109023037 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="206895649195303955496"
+20190109023037 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="258bc5a52f95e551fcc1c0420b4ad63c"
+20190109023040 Starting...
+
+20190109023040 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109023040 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="286211794553864999617"
+
+20190109023040 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="286211794553864999617"
+20190109023040 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="137263c3cf6956c11c4c304a767922b5"
+20190109023103 Starting...
+
+20190109023103 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109023103 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="112396776317947477341"
+
+20190109023103 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="112396776317947477341"
+20190109023103 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="0d032cb09912f92c60113266fa33d2c3"
+20190109023105 Starting...
+
+20190109023105 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109023105 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="922620714100697823358"
+
+20190109023105 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="922620714100697823358"
+20190109023105 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="49f17fa26afa2897a2200757bbb4183b"
+20190109023126 Starting...
+
+20190109023126 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109023126 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="812889177911845340778"
+
+20190109023126 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="812889177911845340778"
+20190109023126 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="93361da2752f0a522b9470dbbc511d4a"
+20190109023128 Starting...
+
+20190109023128 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109023128 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="623249991990959096775"
+
+20190109023128 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="623249991990959096775"
+20190109023128 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="ec9de2ff65fb393b7cd893b773abedb3"
+20190109023232 Starting...
+
+20190109023232 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109023232 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="361260430824584504145"
+
+20190109023232 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="361260430824584504145"
+20190109023232 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="23c5fb1d0bce5ab2230717b0015fb26c"
+20190109023234 Starting...
+
+20190109023234 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109023234 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="255920566215462683786"
+
+20190109023234 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="255920566215462683786"
+20190109023234 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="4e4b037b8583984ef9ffd109a2fc983b"
+20190109023248 Starting...
+
+20190109023248 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109023248 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="90689232243556597033"
+
+20190109023248 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="90689232243556597033"
+20190109023248 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="ebf93c5f3b9dabe6b251449b390a0fe8"
+20190109023308 Starting...
+
+20190109023308 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109023308 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="954575802640043139219"
+
+20190109023308 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="954575802640043139219"
+20190109023308 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="94a1df295519834b18373f3236d4b824"
+20190109030657 Starting...
+
+20190109030657 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109030657 Received from 127.0.0.1:5555: 
+
+20190109030742 Starting...
+
+20190109030742 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109030742 Received from 127.0.0.1:5555: 
+
+20190109030804 Starting...
+
+20190109030804 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109030804 Received from 127.0.0.1:5555: 
+
+20190109030825 Starting...
+
+20190109030825 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109030825 Received from 127.0.0.1:5555: 
+
+20190109030913 Starting...
+
+20190109030913 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109030913 Received from 127.0.0.1:5555: 
+
+20190109030953 Starting...
+
+20190109030953 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109030953 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="186853351751734853815"
+
+20190109030953 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="186853351751734853815"
+20190109030953 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="41ce9ef11d27b9d944433da49ee9a82f"
+20190109030957 Starting...
+
+20190109030957 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109030957 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="801574600115559434951"
+
+20190109030957 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="801574600115559434951"
+20190109030957 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="b09dff76ad2e53eb643967f5d86dca7b"
+20190109030959 Starting...
+
+20190109030959 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109030959 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="403619891022163409538"
+
+20190109030959 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="403619891022163409538"
+20190109030959 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="16c2ae585325447086029c4c35080bcd"
+20190109031205 Starting...
+
+20190109031205 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031205 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="535976086106073530935"
+
+20190109031205 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="535976086106073530935"
+20190109031205 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="8243d58aff29f12dc51a3e7b926ff8c8"
+20190109031207 Starting...
+
+20190109031207 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031207 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="833141012536238044544"
+
+20190109031207 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="833141012536238044544"
+20190109031207 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="6b79a041ecafb406009cc4da4aa1aac6"
+20190109031227 Starting...
+
+20190109031227 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031227 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="935683756664170048719"
+
+20190109031227 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="935683756664170048719"
+20190109031227 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="b0d1be7c3a2a2945b789053eacccb355"
+20190109031229 Starting...
+
+20190109031229 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031229 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="17483853791832201389"
+
+20190109031229 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="17483853791832201389"
+20190109031229 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="21175e351d66dcddf6b5e7e881713202"
+20190109031234 Starting...
+
+20190109031234 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031234 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="911338803073419432548"
+
+20190109031234 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="911338803073419432548"
+20190109031234 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="0cc094eaadd83e692a6ccc6f8026a522"
+20190109031236 Starting...
+
+20190109031236 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031236 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="534113037701914678110"
+
+20190109031236 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="534113037701914678110"
+20190109031236 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="18360333d9950292e68d208b23a20491"
+20190109031309 Starting...
+
+20190109031309 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031309 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="294290497306910701691"
+
+20190109031309 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="294290497306910701691"
+20190109031309 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="c19d6bbc166efca2edd279a7ba496d2d"
+20190109031332 Starting...
+
+20190109031332 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031332 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="583738883819855719189"
+
+20190109031332 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="583738883819855719189"
+20190109031332 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="758eb6399b3e49139bfe73df7ea15d59"
+20190109031341 Starting...
+
+20190109031341 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031341 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="55986311771683076"
+
+20190109031341 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="55986311771683076"
+20190109031341 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="12037d3e065c0328cb80e2910c0658a1"
+20190109031343 Starting...
+
+20190109031343 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031343 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="978805176770508360270"
+
+20190109031343 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="978805176770508360270"
+20190109031343 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="319a99d4ecf918100043c98281461985"
+20190109031349 Starting...
+
+20190109031349 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031349 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="464352130770337066414"
+
+20190109031349 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="464352130770337066414"
+20190109031349 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="287e433bb65140a82e5d820934ceb250"
+20190109031409 Starting...
+
+20190109031409 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031409 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="782408664621455202944"
+
+20190109031409 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="782408664621455202944"
+20190109031409 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="21ebed28885b40c455cf0410c7b1a48c"
+20190109031411 Starting...
+
+20190109031411 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031411 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="580684969683837185467"
+
+20190109031411 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="580684969683837185467"
+20190109031411 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="ec312900c746355fb19c2c4ac4b202ba"
+20190109031447 Starting...
+
+20190109031447 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031447 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="842101073585471554111"
+
+20190109031447 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="842101073585471554111"
+20190109031447 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="28ade9a02007a66608d7422927b517f7"
+20190109031448 Starting...
+
+20190109031448 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031448 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="573184947921302519495"
+
+20190109031448 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="573184947921302519495"
+20190109031448 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="1364036423596802593ec5285ecaae7f"
+20190109031530 Starting...
+
+20190109031530 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031530 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="194502556161799231549"
+
+20190109031530 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="194502556161799231549"
+20190109031530 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="2c5847c7064bc4de4fe4249d566134cd"
+20190109031533 Starting...
+
+20190109031533 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031533 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="372542173413359548212"
+
+20190109031533 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="372542173413359548212"
+20190109031533 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="9feb92bf517c4d744b1946dc4f85c198"
+20190109031747 Starting...
+
+20190109031747 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+
+20190109031747 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="721370759929753302781"
+
+20190109031747 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="721370759929753302781"
+20190109031747 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 3600
+Authorization: Digest response="be8e5fbf6fea70934d87fbc007066fbc"
+20190109031748 Starting...
+
+20190109031748 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+
+20190109031748 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="465613295886479648957"
+
+20190109031748 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="465613295886479648957"
+20190109031748 Sent to 127.0.0.1:5555: REGISTER sip:leonard@bigbang.org:abcde SIP/2.0
+Expires: 0
+Authorization: Digest response="db1bd5415b1172009d1d4dd4ba1d2f5f"

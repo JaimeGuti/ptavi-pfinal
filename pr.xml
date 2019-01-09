@@ -2,6 +2,6 @@
 
 <config>
   <server name="MiServidorBigBang" ip="127.0.0.1" puerto="5555"/>
-  <database path="register_users.txt" passwdpath="passwords.txt"/>
+  <database path="register_users.txt" passwdpath="passwords"/>
   <log path="proxylog.txt"/>
 </config>

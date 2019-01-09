@@ -6,6 +6,8 @@ import sys
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler
 import time
+import hashlib
+
 
 class XMLHandler(ContentHandler):
 
@@ -116,13 +118,14 @@ if __name__ == "__main__":
                 fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH,fecha,evento)
 
-                expire = "Expires: " + OPTION
-                LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
-                send_line = LINE + expire
+                expire = "Expires: " + OPTION + "\r\n"
+                LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n"
+                send_line = LINE + expire + "\r\n"
                 my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
 
-                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + send_line
+                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+                evento += send_line
                 fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
 
@@ -130,6 +133,29 @@ if __name__ == "__main__":
                 evento += ": " + data.decode('utf-8') + "\r\n\r\n"
                 fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
                 log_fich(LOGFICH, fecha, evento)
+
+                if data.decode('utf-8').split()[1] == '401':
+                    evento = "Received from "  + IP_REGPROXY + ":"
+                    evento += PORT_REGPROXY + data.decode('utf-8') + "\r\n"
+                    fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                    log_fich(LOGFICH, fecha, evento)
+                    print(evento)
+
+                    nonce_num = data.decode('utf-8').split('"')[1]
+
+                    hash = hashlib.md5()
+                    hash.update(bytes(PASSWORD, 'utf-8') + bytes(nonce_num, 'utf-8'))
+                    hash = hash.hexdigest()
+                    authorized = 'Authorization: Digest response="' + hash + '"'
+                    send_line = LINE + expire + authorized + "\r\n"
+                    my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
+                    data = my_socket.recv(1024)
+
+                    evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY
+                    evento += ": " + send_line
+                    fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                    log_fich(LOGFICH, fecha, evento)
+                    print(evento)
 
             elif METHOD == "INVITE":
 
