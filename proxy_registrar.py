@@ -136,7 +136,8 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                         self.clients = []
                         self.register2json()
                 # Comprobar si el usuario está ya registrado
-                if len(self.clients) != 0:
+                # HAY QUE PERFECCIONARLO
+                if self.clients == []:
                     reg_client = line.decode('utf-8').split(':')[1]
                     for username in self.clients:
                         if username == reg_client:
@@ -151,6 +152,40 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
 
         elif method == "INVITE":
             self.json2registered()
+            reg_client = line.decode('utf-8').split(':')[1].split(' ')[0]
+            print("1: " + reg_client) # Quitar esto
+            ip_client = self.client_address[0]
+            print("3: " + ip_client) # Quitar esto
+            port_client = self.client_address[1]
+            print("4: " + str(port_client)) # Quitar esto
+            self.wfile.write(b"Deee lujoooo\r\n")
+            with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
+                mess = line.decode('utf-8')
+                my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                my_socket.connect((ip_client, int(port_client)))
+                my_socket.send(bytes(mess, 'utf-8') + b'\r\n')
+                data = my_socket.recv(1024)
+                evento = " Sent to " + ip_client + ":" + str(port_client)
+                evento = ": " + mess
+                print("Lo enviado: " + evento)
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                log_fich(LOG_PATH, fecha, evento)
+                evento = " Received from " + ip_client + ":" + str(port_client)
+                evento = ": " + data.decode('utf-8')
+                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                log_fich(LOG_PATH, fecha, evento)
+                print("Lo recibido: " + evento)
+                self.wfile.write(bytes(data.decode('utf-8'), 'utf-8'))
+
+            for username in self.clients:
+                if username != reg_client:
+                    evento = reg_client + " need to do REGISTER "
+                    evento += "before INVITE\r\n"
+                    self.wfile.write(bytes(evento, ('utf-8')))
+                    print(evento)
+                    t = time.localtime(time.time())
+                    fecha = time.strftime('%Y%m%d%H%M%S', t)
+                    log_fich(LOG_PATH, fecha, evento)
 
         elif method == "BYE":
             print(method)

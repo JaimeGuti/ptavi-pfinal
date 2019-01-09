@@ -100,3 +100,36 @@ Expires: 3600
 20190109052914 Sent to 127.0.0.1:5555: REGISTER sip:penny@girlnextdoor.com:12345 SIP/2.0
 Expires: 3600
 Authorization: Digest response="cf739e98ba59e7730dc2f1876b2f5d3b"
+20190109061439 Starting...
+
+20190109061439 Sent to 127.0.0.1:5555: REGISTER sip:penny@girlnextdoor.com:12345 SIP/2.0
+Expires: 3600
+
+20190109061439 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="122487540273890850869"
+
+20190109061439 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="122487540273890850869"
+20190109061439 Sent to 127.0.0.1:5555: REGISTER sip:penny@girlnextdoor.com:12345 SIP/2.0
+Expires: 3600
+Authorization: Digest response="1ccb12c0bef29c60e89d1766bf043079"
+20190109061729 Starting...
+
+20190109061729 Sent to 127.0.0.1:5555: REGISTER sip:penny@girlnextdoor.com:12345 SIP/2.0
+Expires: 3600
+
+20190109061729 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="789884645134513933211"
+
+20190109061729 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="789884645134513933211"
+20190109061729 Sent to 127.0.0.1:5555: REGISTER sip:penny@girlnextdoor.com:12345 SIP/2.0
+Expires: 3600
+Authorization: Digest response="07788262490ecb6d916050d33a8cdff2"
+20190109061830 Starting...
+
+20190109061830 Sent to 127.0.0.1:5555: REGISTER sip:penny@girlnextdoor.com:12345 SIP/2.0
+Expires: 3600
+
+20190109061830 Received from 127.0.0.1:5555:  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="320760620253186962358"
+
+20190109061830 Received from 127.0.0.1:5555 SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="320760620253186962358"
+20190109061830 Sent to 127.0.0.1:5555: REGISTER sip:penny@girlnextdoor.com:12345 SIP/2.0
+Expires: 3600
+Authorization: Digest response="66d69def52d6bfbef8e6202ccd8d95dd"
