@@ -118,10 +118,10 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                             ld = line.decode('utf-8')
                             client_name = ld.split(' ')[1][4:-6]
                             self.clients = [client_name,
-                                    {"ip": self.client_address[0],
-                                   "port": self.client_address[1],
-                                   "expires": exp_tm,
-                                   "register_time": fecha}]
+                                            {"ip": self.client_address[0],
+                                             "port": self.client_address[1],
+                                             "expires": exp_tm,
+                                             "register_time": fecha}]
                             self.register2json()
                 # Borra el usuario si expires es igual a 0
                 if int(line.decode('utf-8').split(' ')[3][:1]) == 0:
@@ -159,13 +159,13 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
             port_client = self.clients[1]["port"]
             try:
                 with socket.socket(socket.AF_INET,
-                                    socket.SOCK_DGRAM) as my_socket:
+                                   socket.SOCK_DGRAM) as my_socket:
                     mess = line.decode('utf-8')
                     my_socket.setsockopt(socket.SOL_SOCKET,
-                                        socket.SO_REUSEADDR, 1)
+                                         socket.SO_REUSEADDR, 1)
                     my_socket.connect((ip_client, int(port_client)))
                     my_socket.send(bytes(line.decode('utf-8'),
-                                        'utf-8') + b'\r\n')
+                                         'utf-8') + b'\r\n')
                     #data = my_socket.recv(port_client)
                     data = "SIP/2.0 100 Trying\r\n SIP/2.0 180 Ringing\r\n"
                     data = "SIP/2.0 200 OK\r\n"
@@ -187,14 +187,13 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOG_PATH, fecha, evento)
 
-
         elif method == "BYE":
             self.json2registered()
             ip_client = self.clients[1]["ip"]
             port_client = self.clients[1]["port"]
             try:
                 with socket.socket(socket.AF_INET,
-                                    socket.SOCK_DGRAM) as my_socket:
+                                   socket.SOCK_DGRAM) as my_socket:
                     mess = line.decode('utf-8')
                     evento = " Received from " + ip_client + ":"
                     evento = str(port_client) + ": " + mess
@@ -202,7 +201,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                     fecha = time.strftime('%Y%m%d%H%M%S', t)
                     log_fich(LOG_PATH, fecha, evento)
                     my_socket.setsockopt(socket.SOL_SOCKET,
-                                        socket.SO_REUSEADDR, 1)
+                                         socket.SO_REUSEADDR, 1)
                     my_socket.connect((ip_client, int(port_client)))
                     my_socket.send(bytes(line.decode('utf-8'), 'utf-8'))
                     data = " SIP/2.0 200 OK"
@@ -232,7 +231,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
             log_fich(LOG_PATH, fecha, evento)
             try:
                 my_socket.setsockopt(socket.SOL_SOCKET,
-                                    socket.SO_REUSEADDR, 1)
+                                     socket.SO_REUSEADDR, 1)
                 my_socket.connect((ip_client, int(port_client)))
                 my_socket.send(bytes(line.decode('utf-8'), 'utf-8'))
                 evento = "Sent to " + ip_client + ":" + str(port_client)
@@ -249,8 +248,8 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
 
         elif diferente:
             line = self.rfile.read().decode('utf-8').split()[0]
-            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-            evento += line + "\r\n\r\n"
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+            evento += ": " + line + "\r\n\r\n"
             fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
@@ -277,7 +276,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
         exp_tm = time.strftime('%Y-%m-%d%H%M%S', exp)
         for user in self.clients:
             if self.clients[user] <= exp_tm:
-               self.clients.remove(user)
+                self.clients.remove(user)
 
 
 if __name__ == "__main__":
