@@ -107,7 +107,6 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                             self.a = line.decode('utf-8').split()
                             self.clients.append(str(a))
                             self.clients.append(total_exptm)
-                            #self.register2json()
                             evento = reg_client + " is registered\r\n"
                             self.wfile.write(bytes((evento), 'utf-8'))
                             t = time.localtime(time.time())
@@ -138,7 +137,6 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                         self.clients = []
                         self.register2json()
                 # Comprobar si el usuario está ya registrado
-                # HAY QUE PERFECCIONARLO
                 if self.clients == []:
                     reg_client = line.decode('utf-8').split(':')[1]
                     for username in self.clients:
@@ -166,7 +164,6 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                     my_socket.connect((ip_client, int(port_client)))
                     my_socket.send(bytes(line.decode('utf-8'),
                                          'utf-8') + b'\r\n')
-                    #data = my_socket.recv(port_client)
                     data = "SIP/2.0 100 Trying\r\n SIP/2.0 180 Ringing\r\n"
                     data = "SIP/2.0 200 OK\r\n"
                     evento = " Received from " + ip_client + ":"
@@ -181,8 +178,8 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                     log_fich(LOG_PATH, fecha, evento)
                     self.wfile.write(bytes(data, 'utf-8'))
             except:
-                evento = "SIP/2.0 404 User Not Found"
-                self.wfile.write(bytes(data, 'utf-8'))
+                evento = "SIP/2.0 404 User Not Found\r\n"
+                self.wfile.write(bytes(evento, 'utf-8'))
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOG_PATH, fecha, evento)
@@ -212,7 +209,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                     fecha = time.strftime('%Y%m%d%H%M%S', t)
                     log_fich(LOG_PATH, fecha, evento)
             except:
-                evento = "SIP/2.0 404 User Not Found"
+                evento = "SIP/2.0 404 User Not Found\r\n"
                 self.wfile.write(bytes(data, 'utf-8'))
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
@@ -254,7 +251,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
             log_fich(LOGFICH, fecha, evento)
 
             # Petición de otro método diferente a los descritos
-            self.wfile.write(b"SIP/2.0 405 Method Not Allowed")
+            self.wfile.write(b"SIP/2.0 405 Method Not Allowed\r\n")
 
     def register2json(self):
         # Creación del fichero .json
