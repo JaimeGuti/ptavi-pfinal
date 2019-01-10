@@ -66,6 +66,8 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
         line = self.rfile.read()
         method = line.decode('utf-8').split(' ')[0]
         rand_num = str(randint(1, 999999999999999999999))
+        diferente = (line != "REGISTER") or (line != "INVITE")
+        diferente += (line != "BYE") or (line != "ACK")
 
         if method == "REGISTER":
 
@@ -75,7 +77,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                 total_exptm = time.strftime('%Y%m%d%H%M%S', exptm)
                 auth = 'WWW Authenticate: '
                 auth += 'Digest nonce="' + rand_num + '"'
-                evento = " SIP/2.1 401 Unauthorized " + auth
+                evento = " SIP/2.1 401 Unauthorized\r\n " + auth
                 self.wfile.write(bytes((evento), 'utf-8'))
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
@@ -117,7 +119,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                             client_name = ld.split(' ')[1][4:-6]
                             self.clients = [client_name,
                                     {"ip": self.client_address[0],
-                                   "port":self.client_address[1],
+                                   "port": self.client_address[1],
                                    "expires": exp_tm,
                                    "register_time": fecha}]
                             self.register2json()
@@ -148,51 +150,112 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
                             t = time.localtime(time.time())
                             fecha = time.strftime('%Y%m%d%H%M%S', t)
                             log_fich(LOG_PATH, fecha, evento)
-                            print("User " + reg_client + " is already registered")
+                            print("User " + reg_client + " already registered")
 
         elif method == "INVITE":
             self.json2registered()
             reg_client = line.decode('utf-8').split(':')[1].split(' ')[0]
-            print("1: " + reg_client) # Quitar esto
-            ip_client = self.client_address[0]
-            print("3: " + ip_client) # Quitar esto
-            port_client = self.client_address[1]
-            print("4: " + str(port_client)) # Quitar esto
-            self.wfile.write(b"Deee lujoooo\r\n")
-            with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
-                mess = line.decode('utf-8')
-                my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-                my_socket.connect((ip_client, int(port_client)))
-                my_socket.send(bytes(mess, 'utf-8') + b'\r\n')
-                data = my_socket.recv(1024)
-                evento = " Sent to " + ip_client + ":" + str(port_client)
-                evento = ": " + mess
-                print("Lo enviado: " + evento)
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
-                log_fich(LOG_PATH, fecha, evento)
-                evento = " Received from " + ip_client + ":" + str(port_client)
-                evento = ": " + data.decode('utf-8')
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
-                log_fich(LOG_PATH, fecha, evento)
-                print("Lo recibido: " + evento)
-                self.wfile.write(bytes(data.decode('utf-8'), 'utf-8'))
-
-            for username in self.clients:
-                if username != reg_client:
-                    evento = reg_client + " need to do REGISTER "
-                    evento += "before INVITE\r\n"
-                    self.wfile.write(bytes(evento, ('utf-8')))
-                    print(evento)
+            ip_client = self.clients[1]["ip"]
+            port_client = self.clients[1]["port"]
+            try:
+                with socket.socket(socket.AF_INET,
+                                    socket.SOCK_DGRAM) as my_socket:
+                    mess = line.decode('utf-8')
+                    my_socket.setsockopt(socket.SOL_SOCKET,
+                                        socket.SO_REUSEADDR, 1)
+                    my_socket.connect((ip_client, int(port_client)))
+                    my_socket.send(bytes(line.decode('utf-8'),
+                                        'utf-8') + b'\r\n')
+                    #data = my_socket.recv(port_client)
+                    data = "SIP/2.0 100 Trying\r\n SIP/2.0 180 Ringing\r\n"
+                    data = "SIP/2.0 200 OK\r\n"
+                    evento = " Received from " + ip_client + ":"
+                    evento = str(port_client) + ": " + mess
                     t = time.localtime(time.time())
                     fecha = time.strftime('%Y%m%d%H%M%S', t)
                     log_fich(LOG_PATH, fecha, evento)
+                    evento = " Sent to " + ip_client + ":"
+                    evento = str(port_client) + ": " + data
+                    t = time.localtime(time.time())
+                    fecha = time.strftime('%Y%m%d%H%M%S', t)
+                    log_fich(LOG_PATH, fecha, evento)
+                    self.wfile.write(bytes(data, 'utf-8'))
+            except:
+                evento = "SIP/2.0 404 User Not Found"
+                self.wfile.write(bytes(data, 'utf-8'))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
+                log_fich(LOG_PATH, fecha, evento)
+
 
         elif method == "BYE":
-            print(method)
-            self.wfile.write(b"BYE\r\n")
+            self.json2registered()
+            ip_client = self.clients[1]["ip"]
+            port_client = self.clients[1]["port"]
+            try:
+                with socket.socket(socket.AF_INET,
+                                    socket.SOCK_DGRAM) as my_socket:
+                    mess = line.decode('utf-8')
+                    evento = " Received from " + ip_client + ":"
+                    evento = str(port_client) + ": " + mess
+                    t = time.localtime(time.time())
+                    fecha = time.strftime('%Y%m%d%H%M%S', t)
+                    log_fich(LOG_PATH, fecha, evento)
+                    my_socket.setsockopt(socket.SOL_SOCKET,
+                                        socket.SO_REUSEADDR, 1)
+                    my_socket.connect((ip_client, int(port_client)))
+                    my_socket.send(bytes(line.decode('utf-8'), 'utf-8'))
+                    data = " SIP/2.0 200 OK"
+                    self.wfile.write(bytes(data, 'utf-8'))
+                    evento = "Sent to " + ip_client + ":" + str(port_client)
+                    evento = ": " + data
+                    t = time.localtime(time.time())
+                    fecha = time.strftime('%Y%m%d%H%M%S', t)
+                    log_fich(LOG_PATH, fecha, evento)
+            except:
+                evento = "SIP/2.0 404 User Not Found"
+                self.wfile.write(bytes(data, 'utf-8'))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
+                log_fich(LOG_PATH, fecha, evento)
 
         elif method == "ACK":
-            print(method)
+            self.json2registered()
+            reg_client = line.decode('utf-8').split(':')[1].split(' ')[0]
+            ip_client = self.clients[1]["ip"]
+            port_client = self.clients[1]["port"]
+            mess = line.decode('utf-8')
+            evento = " Received from " + ip_client + ":"
+            evento = str(port_client) + ": " + mess
+            t = time.localtime(time.time())
+            fecha = time.strftime('%Y%m%d%H%M%S', t)
+            log_fich(LOG_PATH, fecha, evento)
+            try:
+                my_socket.setsockopt(socket.SOL_SOCKET,
+                                    socket.SO_REUSEADDR, 1)
+                my_socket.connect((ip_client, int(port_client)))
+                my_socket.send(bytes(line.decode('utf-8'), 'utf-8'))
+                evento = "Sent to " + ip_client + ":" + str(port_client)
+                evento = ": " + mess
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
+                log_fich(LOG_PATH, fecha, evento)
+            except:
+                evento = "SIP/2.0 404 User Not Found"
+                self.wfile.write(bytes(data, 'utf-8'))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
+                log_fich(LOG_PATH, fecha, evento)
+
+        elif diferente:
+            line = self.rfile.read().decode('utf-8').split()[0]
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+            evento += line + "\r\n\r\n"
+            fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+            log_fich(LOGFICH, fecha, evento)
+
+            # Petición de otro método diferente a los descritos
+            self.wfile.write(b"SIP/2.0 405 Method Not Allowed")
 
     def register2json(self):
         # Creación del fichero .json

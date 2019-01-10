@@ -60,14 +60,6 @@ class EchoHandler(socketserver.DatagramRequestHandler):
 
             self.wfile.write(b"SIP/2.0 200 OK")
 
-#        elif line == ""
-            # Usuario se intenta registrar sin autenticarse
-#            self.wfile.write(b"SIP/2.0 401 Unauthorized")
-
-#        elif line == ""
-            # Usuario no encontrado en el servidor de registro
-#            self.wfile.write(b"SIP/2.0 404 User Not Found")
-
         elif diferente:
             evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
             evento += line + "\r\n\r\n"

@@ -103,9 +103,6 @@ if __name__ == "__main__":
     LOGFICH = config_xml['log']['path']
     AUDIO = config_xml['audio']['path']
 
-    # Contenido que vamos a enviar
-    # LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n\r\n"
-
     # Creamos el socket, lo configuramos y lo atamos a un servidor/puerto
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
         my_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -115,7 +112,8 @@ if __name__ == "__main__":
             if METHOD == "REGISTER":
 
                 evento = "Starting..." + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH,fecha,evento)
 
                 expire = "Expires: " + OPTION + "\r\n"
@@ -126,18 +124,21 @@ if __name__ == "__main__":
 
                 evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
                 evento += send_line
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH, fecha, evento)
 
                 evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
                 evento += ": " + data.decode('utf-8') + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH, fecha, evento)
 
                 if data.decode('utf-8').split()[1] == '401':
                     evento = "Received from "  + IP_REGPROXY + ":"
                     evento += PORT_REGPROXY + data.decode('utf-8') + "\r\n"
-                    fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                    t = time.localtime(time.time())
+                    fecha = time.strftime('%Y%m%d%H%M%S', t)
                     log_fich(LOGFICH, fecha, evento)
                     print(evento)
 
@@ -153,7 +154,8 @@ if __name__ == "__main__":
 
                     evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY
                     evento += ": " + send_line
-                    fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                    t = time.localtime(time.time())
+                    fecha = time.strftime('%Y%m%d%H%M%S', t)
                     log_fich(LOGFICH, fecha, evento)
                     print(evento)
 
@@ -161,8 +163,9 @@ if __name__ == "__main__":
 
                 LINE = METHOD + " " + USER + "\r\n\r\n"
 
-                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY + ": " + LINE
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH,fecha,evento)
 
                 session = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
@@ -175,25 +178,40 @@ if __name__ == "__main__":
                 send_line = session + "\r\n"
                 my_socket.send(bytes(session, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
+                my_socket.connect((IP_SERVER, int(PORT_SERVER)))
+
+                resp = "SIP/2.0 100 Trying\r\n SIP/2.0 180 Ringing\r\n"
+                resp += "SIP/2.0 200 OK\r\n"
+                if data != resp:
+                    LINE = "ACK sip:" + OPTION + " SIP/2.0\r\n"
+                    my_socket.send(bytes(LINE, 'utf-8') + b'\r\n')
+                    aEjecutar = "./mp32rtp -i " + IP_REGPROXY + " -p "
+                    aEjecutar += PORT_RTPAUDIO + " < " + AUDIO
+                    print("Vamos a ejecutar", aEjecutar)
+                    os.system(aEjecutar)
+
 
             elif METHOD == "BYE":
-                # os.system('killall mp32rtp 2> /dev/null')
                 LINE = METHOD + "\r\n\r\n"
                 send_line = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
                 my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
 
-                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": " + LINE
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+                evento += LINE
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH, fecha, evento)
 
                 evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
                 evento += data.decode('utf-8') + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH, fecha, evento)
 
                 evento = "Finishing." + "\r\n\r\n"
-                fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
+                t = time.localtime(time.time())
+                fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH, fecha, evento)
         except:
             wrong_connection = IP_REGPROXY + " port " + PORT_REGPROXY
@@ -201,7 +219,6 @@ if __name__ == "__main__":
             evento = "Error: No server listening at " + wrong_connection
             fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
-
 
         mens_ack = data.decode('utf-8')
         if mens_ack == "SIP/2.0 100 Trying SIP/2.0 180 Ringing SIP/2.0 200 OK":

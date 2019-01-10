@@ -1,480 +1,7 @@
-20190109021220 Servidor Proxy/Registrar apagado
-20190109021222  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="471782640083848217270"20190109021222 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109021222 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109021550 Servidor Proxy/Registrar apagado
-20190109021553  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="444461054389741331004"20190109021553 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109021553 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109021602 Servidor Proxy/Registrar apagado
-20190109021621  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="669383801603012844691"20190109021621 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109021621 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109021743 Servidor Proxy/Registrar apagado
-20190109021757 Servidor Proxy/Registrar apagado
-20190109021940 Servidor Proxy/Registrar apagado
-20190109021953 Servidor Proxy/Registrar apagado
-20190109022055 Servidor Proxy/Registrar apagado
-20190109022133 Servidor Proxy/Registrar apagado
-20190109022142 Servidor Proxy/Registrar apagado
-20190109022242 Servidor Proxy/Registrar apagado
-20190109022308 Servidor Proxy/Registrar apagado
-20190109022356 Servidor Proxy/Registrar apagado
-20190109022358  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="331267770210422915703"20190109022402  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="523380711909400401281"20190109022438 Servidor Proxy/Registrar apagado
-20190109022441  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="649742519610378819528"20190109022457 Servidor Proxy/Registrar apagado
-20190109022518  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="125385001432043272536"20190109022520  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="572963984368603685901"20190109022535 Servidor Proxy/Registrar apagado
-20190109022539  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="707143704513160019544"20190109022540  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="358668852915240828727"20190109022909 Servidor Proxy/Registrar apagado
-20190109022913  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="657188447483798760917"20190109022913 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109022920  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="114160887626828487020"20190109022922 Servidor Proxy/Registrar apagado
-20190109022928 Servidor Proxy/Registrar apagado
-20190109022939  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="949138987431340305894"20190109022949  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="480022947197279605373"20190109022949 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109023015 Servidor Proxy/Registrar apagado
-20190109023037  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="206895649195303955496"20190109023040  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="286211794553864999617"20190109023040 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109023050 Servidor Proxy/Registrar apagado
-20190109023103  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="112396776317947477341"20190109023105  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="922620714100697823358"20190109023105 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109023123 Servidor Proxy/Registrar apagado
-20190109023126  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="812889177911845340778"20190109023128  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="623249991990959096775"20190109023128 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109023213 Servidor Proxy/Registrar apagado
-20190109023217 Servidor Proxy/Registrar apagado
-20190109023232  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="361260430824584504145"20190109023234  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="255920566215462683786"20190109023234 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109023245 Servidor Proxy/Registrar apagado
-20190109023248  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="90689232243556597033"20190109023308  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="954575802640043139219"20190109023308 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109030654 Servidor Proxy/Registrar apagado
-20190109030702 Servidor Proxy/Registrar apagado
-20190109030801 Servidor Proxy/Registrar apagado
-20190109030822 Servidor Proxy/Registrar apagado
-20190109030911 Servidor Proxy/Registrar apagado
-20190109030951 Servidor Proxy/Registrar apagado
-20190109030953  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="186853351751734853815"20190109030957  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="801574600115559434951"20190109030957 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109030959  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="403619891022163409538"20190109031158 Servidor Proxy/Registrar apagado
-20190109031205  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="535976086106073530935"20190109031205 leonard@bigbang.orgis registered20190109031205 leonard@bigbang.orgis registered20190109031207  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="833141012536238044544"20190109031207 leonard@bigbang.orgis registered20190109031207 leonard@bigbang.orgis registered20190109031207 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031225 Servidor Proxy/Registrar apagado
-20190109031227  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="935683756664170048719"20190109031227 leonard@bigbang.orgis registered20190109031227 leonard@bigbang.orgis registered20190109031227 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031229  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="17483853791832201389"20190109031229 leonard@bigbang.orgis registered20190109031229 leonard@bigbang.orgis registered20190109031234  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="911338803073419432548"20190109031234 leonard@bigbang.orgis registered20190109031234 leonard@bigbang.orgis registered20190109031234 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031236  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="534113037701914678110"20190109031236 leonard@bigbang.orgis registered20190109031236 leonard@bigbang.orgis registered20190109031304 Servidor Proxy/Registrar apagado
-20190109031309  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="294290497306910701691"20190109031329 Servidor Proxy/Registrar apagado
-20190109031332  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="583738883819855719189"20190109031332 leonard@bigbang.orgis registered20190109031332 leonard@bigbang.orgis registered20190109031341  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="55986311771683076"20190109031341 leonard@bigbang.orgis registered20190109031341 leonard@bigbang.orgis registered20190109031343  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="978805176770508360270"20190109031343 leonard@bigbang.orgis registered20190109031343 leonard@bigbang.orgis registered20190109031343 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031349  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="464352130770337066414"20190109031349 leonard@bigbang.orgis registered20190109031349 leonard@bigbang.orgis registered20190109031349 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031405 Servidor Proxy/Registrar apagado
-20190109031409  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="782408664621455202944"20190109031409 leonard@bigbang.orgis registered20190109031409 leonard@bigbang.orgis registered20190109031411  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="580684969683837185467"20190109031411 leonard@bigbang.orgis registered20190109031411 leonard@bigbang.orgis registered20190109031411 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031444 Servidor Proxy/Registrar apagado
-20190109031447  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="842101073585471554111"20190109031447 leonard@bigbang.orgis registered20190109031447 leonard@bigbang.orgis registered20190109031448  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="573184947921302519495"20190109031448 leonard@bigbang.orgis registered20190109031448 leonard@bigbang.orgis registered20190109031448 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031453 Servidor Proxy/Registrar apagado
-20190109031530  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="194502556161799231549"20190109031530 leonard@bigbang.orgis registered20190109031530 leonard@bigbang.orgis registered20190109031533  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="372542173413359548212"20190109031533 leonard@bigbang.orgis registered20190109031533 leonard@bigbang.orgis registered20190109031533 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031742 Servidor Proxy/Registrar apagado
-20190109031747  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="721370759929753302781"20190109031747 leonard@bigbang.orgis registered20190109031747 leonard@bigbang.orgis registered20190109031748  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="465613295886479648957"20190109031748 leonard@bigbang.orgis registered20190109031748 leonard@bigbang.orgis registered20190109031748 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109031751 Servidor Proxy/Registrar apagado
-20190109040601 Servidor Proxy/Registrar apagado
-20190109040607  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="112295368484161378938"20190109040607 leonard@bigbang.orgis registered20190109040607 leonard@bigbang.orgis registered20190109040613  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="858243979606403914731"20190109040613 leonard@bigbang.orgis registered20190109040613 leonard@bigbang.orgis registered20190109040613 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109040648 Servidor Proxy/Registrar apagado
-20190109040755 Servidor Proxy/Registrar apagado
-20190109040817  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="359131652746431127052"20190109040817 leonard@bigbang.org is registered 20190109040817 leonard@bigbang.org is registered 20190109040832  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="853118682138326797582"20190109040832 leonard@bigbang.org is registered 20190109040832 leonard@bigbang.org is registered 20190109040832 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109040932 Servidor Proxy/Registrar apagado
-20190109040936  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="502666301436850844844"20190109040936 leonard@bigbang.org is registered 20190109040936 leonard@bigbang.org is registered 20190109040940  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="799969031453008786315"20190109040940 leonard@bigbang.org is registered 20190109040940 leonard@bigbang.org is registered 20190109041004 Servidor Proxy/Registrar apagado
-20190109041008  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="970751283873684312591"20190109041008 leonard@bigbang.org is registered 20190109041008 leonard@bigbang.org is registered 20190109041010  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="741413885864606407847"20190109041010 leonard@bigbang.org is registered 20190109041010 leonard@bigbang.org is registered 20190109041029 Servidor Proxy/Registrar apagado
-20190109041032  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="217624938782017612893"20190109041032 leonard@bigbang.org is registered 20190109041032 leonard@bigbang.org is registered 20190109041035  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="394120265969420760129"20190109041035 leonard@bigbang.org is registered 20190109041035 leonard@bigbang.org is registered 20190109041035 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109041043 Servidor Proxy/Registrar apagado
-20190109041255 Servidor Proxy/Registrar apagado
-20190109041259  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="861904072243727089082"20190109041259 leonard@bigbang.org is registered 20190109041259 leonard@bigbang.org is registered 20190109041302  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="422944192140442267043"20190109041302 leonard@bigbang.org is registered 20190109041302 leonard@bigbang.org is registered 20190109041318 Servidor Proxy/Registrar apagado
-20190109041322  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="22675529649384370311"20190109041322 leonard@bigbang.org is registered 20190109041322 leonard@bigbang.org is registered 20190109041324  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="623840577252834013676"20190109041324 leonard@bigbang.org is registered 20190109041324 leonard@bigbang.org is registered 20190109041338 Servidor Proxy/Registrar apagado
-20190109041352  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="978112555476861603486"20190109041352 leonard@bigbang.org is registered 20190109041352 leonard@bigbang.org is registered 20190109041355  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="7762687870492269651"20190109041355 leonard@bigbang.org is registered 20190109041355 leonard@bigbang.org is registered 20190109041355 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109041459 Servidor Proxy/Registrar apagado
-20190109041503  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="532015599351656915598"20190109041503 leonard@bigbang.org is registered 20190109041503 leonard@bigbang.org is registered 20190109041506  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="549634158388390161082"20190109041506 leonard@bigbang.org is registered 20190109041506 leonard@bigbang.org is registered 20190109041506 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109041549 Servidor Proxy/Registrar apagado
-20190109041553  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="323280769374819686888"20190109041553 leonard@bigbang.org is registered 20190109041553 leonard@bigbang.org is registered 20190109041558  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="437633364303370395277"20190109041558 leonard@bigbang.org is registered 20190109041558 leonard@bigbang.org is registered 20190109041558 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109041703 Servidor Proxy/Registrar apagado
-20190109041707  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="98437173642566280962"20190109041707 leonard@bigbang.org is registered
-20190109041707 leonard@bigbang.org is registered
-20190109041711  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="899905036194061180252"20190109041711 leonard@bigbang.org is registered
-20190109041711 leonard@bigbang.org is registered
-20190109041711 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109041724 Servidor Proxy/Registrar apagado
-20190109041746 Servidor Proxy/Registrar apagado
-20190109041820 Servidor Proxy/Registrar apagado
-20190109041929  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="142002851401567008132"20190109041929 leonard@bigbang.org is registered
-20190109041929 leonard@bigbang.org is registered
-20190109041934  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="719291530728794029555"20190109041934 leonard@bigbang.org is registered
-20190109041934 leonard@bigbang.org is registered
-20190109041934 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109042024 Servidor Proxy/Registrar apagado
-20190109042029  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="245658890390252412897"20190109042029 leonard@bigbang.org is registered
-20190109042029 leonard@bigbang.org is registered
-20190109042032  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="335949491401281274840"20190109042032 leonard@bigbang.org is registered
-20190109042032 leonard@bigbang.org is registered
-20190109042032 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109042050 Servidor Proxy/Registrar apagado
-20190109042146 Servidor Proxy/Registrar apagado
-20190109042433 Servidor Proxy/Registrar apagado
-20190109042701 Servidor Proxy/Registrar apagado
-20190109042917 Servidor Proxy/Registrar apagado
-20190109043053 Servidor Proxy/Registrar apagado
-20190109043113 Servidor Proxy/Registrar apagado
-20190109043148 Servidor Proxy/Registrar apagado
-20190109044921  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="295674585931629819370"20190109044921 leonard@bigbang.org is registered
-20190109044921 leonard@bigbang.org is registered
-20190109044928  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="649781728576542591450"20190109044928 penny@girlnextdoor.com is registered
-20190109044928 penny@girlnextdoor.com is registered
-20190109045859 Servidor Proxy/Registrar apagado
-20190109045913  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="262035753470663343111"20190109045913 leonard@bigbang.org is registered
-20190109045913 leonard@bigbang.org is registered
-20190109050107 Servidor Proxy/Registrar apagado
-20190109050110  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="504810400009284712937"20190109050110 leonard@bigbang.org is registered
-20190109050110 leonard@bigbang.org is registered
-20190109050446 Servidor Proxy/Registrar apagado
-20190109050449  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="984291092326078442505"20190109050449 leonard@bigbang.org is registered
-20190109050457 Servidor Proxy/Registrar apagado
-20190109050500  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="817812094088079789357"20190109050500 leonard@bigbang.org is registered
-20190109050500 leonard@bigbang.org is registered
-20190109050631 Servidor Proxy/Registrar apagado
-20190109050634  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="894131057196594847960"20190109050634 leonard@bigbang.org is registered
-20190109050811 Servidor Proxy/Registrar apagado
-20190109050814  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="785191222226969298542"20190109050814 leonard@bigbang.org is registered
-20190109050851 Servidor Proxy/Registrar apagado
-20190109050853  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="703871807575426891168"20190109050853 leonard@bigbang.org is registered
-20190109050853 leonard@bigbang.org is registered
-20190109050946 Servidor Proxy/Registrar apagado
-20190109050949  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="167056048184431276408"20190109050949 leonard@bigbang.org is registered
-20190109050949 leonard@bigbang.org is registered
-20190109051044 Servidor Proxy/Registrar apagado
-20190109051047  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="128862606814270611701"20190109051047 leonard@bigbang.org is registered
-20190109051047 leonard@bigbang.org is registered
-20190109051141 Servidor Proxy/Registrar apagado
-20190109051144  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="62513715513207162693"20190109051144 leonard@bigbang.org is registered
-20190109051144 leonard@bigbang.org is registered
-20190109051349 Servidor Proxy/Registrar apagado
-20190109051353  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="805148005556057760207"20190109051353 leonard@bigbang.org is registered
-20190109051353 leonard@bigbang.org is registered
-20190109051409 Servidor Proxy/Registrar apagado
-20190109051412  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="694694198267462394636"20190109051412 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109051412 leonard@bigbang.org is registered
-20190109051412 leonard@bigbang.org is registered
-20190109051412 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109051432 Servidor Proxy/Registrar apagado
-20190109051435  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="273244934191263598959"20190109051435 leonard@bigbang.org is registered
-20190109051435 leonard@bigbang.org is registered
-20190109051435 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109051537 Servidor Proxy/Registrar apagado
-20190109051540  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="246036293250100388960"20190109051540 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109051540 leonard@bigbang.org is registered
-20190109051540 leonard@bigbang.org is registered
-20190109051540 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109051549 Servidor Proxy/Registrar apagado
-20190109051553  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="917199185076656485010"20190109051553 leonard@bigbang.org is registered
-20190109051553 leonard@bigbang.org is registered
-20190109051553 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109051730 Servidor Proxy/Registrar apagado
-20190109051733 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109051733  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="269209373040831320303"20190109051746  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="554527640152050393945"20190109051813 Servidor Proxy/Registrar apagado
-20190109051817  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="580410694344157204954"20190109051817 penny@girlnextdoor.com is registered
-20190109051817 penny@girlnextdoor.com is registered
-20190109051821  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="747128690655279122252"20190109051841 SIP/2.0 200 OK
-User penny@girlnextdoor.com is already registered20190109051841  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="821348483918358196053"20190109051843  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="917461749908347119833"20190109051859 Servidor Proxy/Registrar apagado
-20190109051935  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="61772593213507238342"20190109051935 leonard@bigbang.org is registered
-20190109051935 leonard@bigbang.org is registered
-20190109051937  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="569134593713412708"20190109051937 penny@girlnextdoor.com is registered
-20190109051937 penny@girlnextdoor.com is registered
-20190109051939  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="958133191792102066526"20190109051939 leonard@bigbang.org is registered
-20190109051939 leonard@bigbang.org is registered
-20190109051940  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="494161472823608155215"20190109051940 penny@girlnextdoor.com is registered
-20190109051940 penny@girlnextdoor.com is registered
-20190109052011 SIP/2.0 200 OK
-User penny@girlnextdoor.com is already registered20190109052011  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="40461544867954956061"20190109052023  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="148222884124484254666"20190109052023 leonard@bigbang.org is registered
-20190109052023 leonard@bigbang.org is registered
-20190109052023 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109052041 Servidor Proxy/Registrar apagado
-20190109052050  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="682515151147441735466"20190109052050 leonard@bigbang.org is registered
-20190109052050 leonard@bigbang.org is registered
-20190109052054 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052054  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="808428620530308001988"20190109052130 Servidor Proxy/Registrar apagado
-20190109052134 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052134  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="708247603627738476799"20190109052138 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052138  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="900605149693775911714"20190109052212 Servidor Proxy/Registrar apagado
-20190109052220 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052220  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="603653304570357780095"20190109052223 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052223  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="862296952671329149780"20190109052232 Servidor Proxy/Registrar apagado
-20190109052237  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="771833350589344942188"20190109052237 leonard@bigbang.org is registered
-20190109052237 leonard@bigbang.org is registered
-20190109052241 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052241  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="282191008220473833238"20190109052328 Servidor Proxy/Registrar apagado
-20190109052335 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052335  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="617608290393588117648"20190109052338 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052338  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="432787303651275271576"20190109052519 Servidor Proxy/Registrar apagado
-20190109052530  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="588922323947349379971"20190109052530 leonard@bigbang.org is registered
-20190109052530 leonard@bigbang.org is registered
-20190109052535 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052535  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="6282715768600894358"20190109052609 Servidor Proxy/Registrar apagado
-20190109052613  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="73275629023920295047"20190109052613 leonard@bigbang.org is registered
-20190109052613 leonard@bigbang.org is registered
-20190109052613 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052617  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="943857126802820229847"20190109052617 leonard@bigbang.org is registered
-20190109052617 leonard@bigbang.org is registered
-20190109052617 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109052641  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="196019499394203599486"20190109052641 leonard@bigbang.org is registered
-20190109052641 leonard@bigbang.org is registered
-20190109052641 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109052643  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="828477260410566723298"20190109052643 leonard@bigbang.org is registered
-20190109052643 leonard@bigbang.org is registered
-20190109052643 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109052644  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="80349675416289849211"20190109052644 leonard@bigbang.org is registered
-20190109052644 leonard@bigbang.org is registered
-20190109052644 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109052653  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="985924281127490402131"20190109052653 penny@girlnextdoor.com is registered
-20190109052653 penny@girlnextdoor.com is registered
-20190109052653 SIP/2.0 200 OK
-User penny@girlnextdoor.com is already registered20190109052659  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="482829070554229201889"20190109052659 leonard@bigbang.org is registered
-20190109052659 leonard@bigbang.org is registered
-20190109052659 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109052702  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="567343381278561331215"20190109052702 penny@girlnextdoor.com is registered
-20190109052702 penny@girlnextdoor.com is registered
-20190109052702 SIP/2.0 200 OK
-User penny@girlnextdoor.com is already registered20190109052858 Servidor Proxy/Registrar apagado
-20190109052914  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="403543614723679037094"20190109052914 penny@girlnextdoor.com is registered
-20190109052914 penny@girlnextdoor.com is registered
-20190109052914 SIP/2.0 200 OK
-User penny@girlnextdoor.com is already registered20190109052918  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="630347354736284826273"20190109052918 leonard@bigbang.org is registered
-20190109052918 leonard@bigbang.org is registered
-20190109052918 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053056 Servidor Proxy/Registrar apagado
-20190109053105  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="58076844001176096309"20190109053105 leonard@bigbang.org is registered
-20190109053105 leonard@bigbang.org is registered
-20190109053105 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053109  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="65842523270585774134"20190109053109 leonard@bigbang.org is registered
-20190109053109 leonard@bigbang.org is registered
-20190109053109 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053141 Servidor Proxy/Registrar apagado
-20190109053144  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="566180191427207462844"20190109053144 leonard@bigbang.org is registered
-20190109053144 leonard@bigbang.org is registered
-20190109053144 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053146  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="643099087589987836793"20190109053146 leonard@bigbang.org is registered
-20190109053146 leonard@bigbang.org is registered
-20190109053146 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053308 Servidor Proxy/Registrar apagado
-20190109053314  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="138519393711003669317"20190109053314 leonard@bigbang.org is registered
-20190109053314 leonard@bigbang.org is registered
-20190109053314 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053317  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="804064137788356671434"20190109053317 leonard@bigbang.org is registered
-20190109053317 leonard@bigbang.org is registered
-20190109053317 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053343 Servidor Proxy/Registrar apagado
-20190109053348  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="865833500650098239181"20190109053348 leonard@bigbang.org is registered
-20190109053348 leonard@bigbang.org is registered
-20190109053348 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053350  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="972205389086627272956"20190109053350 leonard@bigbang.org is registered
-20190109053350 leonard@bigbang.org is registered
-20190109053350 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053352  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="995379744953769022711"20190109053352 leonard@bigbang.org is registered
-20190109053352 leonard@bigbang.org is registered
-20190109053352 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053416 Servidor Proxy/Registrar apagado
-20190109053419  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="147814404113418880868"20190109053419 leonard@bigbang.org is registered
-20190109053419 leonard@bigbang.org is registered
-20190109053419 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053421  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="612944669026245131742"20190109053421 leonard@bigbang.org is registered
-20190109053421 leonard@bigbang.org is registered
-20190109053421 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053604 Servidor Proxy/Registrar apagado
-20190109053608  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="470312888069490746777"20190109053608 leonard@bigbang.org is registered
-20190109053608 leonard@bigbang.org is registered
-20190109053608 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053610  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="670420687733508732980"20190109053610 leonard@bigbang.org is registered
-20190109053610 leonard@bigbang.org is registered
-20190109053610 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053621 Servidor Proxy/Registrar apagado
-20190109053624  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="612085206214114630761"20190109053624 leonard@bigbang.org is registered
-20190109053624 leonard@bigbang.org is registered
-20190109053624 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053626  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="321381590975128456116"20190109053626 leonard@bigbang.org is registered
-20190109053626 leonard@bigbang.org is registered
-20190109053626 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053633 Servidor Proxy/Registrar apagado
-20190109053636  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="268160345310157387409"20190109053636 leonard@bigbang.org is registered
-20190109053636 leonard@bigbang.org is registered
-20190109053636 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053643 Servidor Proxy/Registrar apagado
-20190109053647  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="358293042372875006309"20190109053647 leonard@bigbang.org is registered
-20190109053647 leonard@bigbang.org is registered
-20190109053647 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053648  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="444121435832176835494"20190109053648 leonard@bigbang.org is registered
-20190109053648 leonard@bigbang.org is registered
-20190109053648 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053739 Servidor Proxy/Registrar apagado
-20190109053746  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="969070046709309530285"20190109053746 leonard@bigbang.org is registered
-20190109053746 leonard@bigbang.org is registered
-20190109053746 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053748  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="56602484080700709093"20190109053748 leonard@bigbang.org is registered
-20190109053748 leonard@bigbang.org is registered
-20190109053748 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053759  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="395491519413816155018"20190109053759 leonard@bigbang.org is registered
-20190109053759 leonard@bigbang.org is registered
-20190109053759 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053852 Servidor Proxy/Registrar apagado
-20190109053855  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="866151008126634401916"20190109053855 leonard@bigbang.org is registered
-20190109053855 leonard@bigbang.org is registered
-20190109053855 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053857  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="804184399353965288532"20190109053857 leonard@bigbang.org is registered
-20190109053857 leonard@bigbang.org is registered
-20190109053857 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053859  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="658812933309300014679"20190109053859 leonard@bigbang.org is registered
-20190109053859 leonard@bigbang.org is registered
-20190109053859 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053910 Servidor Proxy/Registrar apagado
-20190109053914  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="270658731485787767353"20190109053914 leonard@bigbang.org is registered
-20190109053914 leonard@bigbang.org is registered
-20190109053914 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053915  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="9622668995292753547"20190109053915 leonard@bigbang.org is registered
-20190109053915 leonard@bigbang.org is registered
-20190109053915 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053938 Servidor Proxy/Registrar apagado
-20190109053943  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="379192898072898457336"20190109053943 leonard@bigbang.org is registered
-20190109053943 leonard@bigbang.org is registered
-20190109053943 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109053945  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="385461738255912379229"20190109053945 leonard@bigbang.org is registered
-20190109053945 leonard@bigbang.org is registered
-20190109053945 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109053947  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="304558516350433812636"20190109053947 leonard@bigbang.org is registered
-20190109053947 leonard@bigbang.org is registered
-20190109053947 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054017 Servidor Proxy/Registrar apagado
-20190109054020  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="210387012660446798710"20190109054020 leonard@bigbang.org is registered
-20190109054020 leonard@bigbang.org is registered
-20190109054020 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054021  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="497050411153936950655"20190109054021 leonard@bigbang.org is registered
-20190109054021 leonard@bigbang.org is registered
-20190109054021 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054104 Servidor Proxy/Registrar apagado
-20190109054107  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="132086958376475743741"20190109054107 leonard@bigbang.org is registered
-20190109054107 leonard@bigbang.org is registered
-20190109054107 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054110  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="281150880855510861666"20190109054110 leonard@bigbang.org is registered
-20190109054110 leonard@bigbang.org is registered
-20190109054110 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054111  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="703982594342581944374"20190109054111 leonard@bigbang.org is registered
-20190109054111 leonard@bigbang.org is registered
-20190109054111 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054114  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="775553754437105322133"20190109054114 leonard@bigbang.org is registered
-20190109054114 leonard@bigbang.org is registered
-20190109054114 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054132 Servidor Proxy/Registrar apagado
-20190109054135  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="736596664795529978430"20190109054135 leonard@bigbang.org is registered
-20190109054135 leonard@bigbang.org is registered
-20190109054135 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054137  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="304148895473431743282"20190109054137 leonard@bigbang.org is registered
-20190109054137 leonard@bigbang.org is registered
-20190109054137 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054206 Servidor Proxy/Registrar apagado
-20190109054211  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="547787062859669149260"20190109054211 leonard@bigbang.org is registered
-20190109054211 leonard@bigbang.org is registered
-20190109054211 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054212  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="224435651326053297125"20190109054212 leonard@bigbang.org is registered
-20190109054212 leonard@bigbang.org is registered
-20190109054212 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054213  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="629797421581172285179"20190109054213 leonard@bigbang.org is registered
-20190109054213 leonard@bigbang.org is registered
-20190109054213 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054217  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="215810135296994798432"20190109054217 leonard@bigbang.org is registered
-20190109054217 leonard@bigbang.org is registered
-20190109054217 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054243 Servidor Proxy/Registrar apagado
-20190109054247  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="54211747899584899243"20190109054247 leonard@bigbang.org is registered
-20190109054247 leonard@bigbang.org is registered
-20190109054247 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054249  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="881340644642133731718"20190109054249 leonard@bigbang.org is registered
-20190109054249 leonard@bigbang.org is registered
-20190109054249 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054306  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="129024736355928928005"20190109054306 leonard@bigbang.org is registered
-20190109054306 leonard@bigbang.org is registered
-20190109054306 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054346 Servidor Proxy/Registrar apagado
-20190109054354  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="304751408839699866878"20190109054354 leonard@bigbang.org is registered
-20190109054354 leonard@bigbang.org is registered
-20190109054354 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054355  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="693649382278356537972"20190109054355 leonard@bigbang.org is registered
-20190109054355 leonard@bigbang.org is registered
-20190109054355 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054357  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="161710685564400595725"20190109054357 leonard@bigbang.org is registered
-20190109054357 leonard@bigbang.org is registered
-20190109054357 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054359  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="8534434143101258001"20190109054359 leonard@bigbang.org is registered
-20190109054359 leonard@bigbang.org is registered
-20190109054359 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054424 Servidor Proxy/Registrar apagado
-20190109054427  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="304603771348904457914"20190109054427 leonard@bigbang.org is registered
-20190109054427 leonard@bigbang.org is registered
-20190109054427 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054428  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="999154240942828618518"20190109054428 leonard@bigbang.org is registered
-20190109054428 leonard@bigbang.org is registered
-20190109054428 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054429  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="499847008576174924989"20190109054429 leonard@bigbang.org is registered
-20190109054429 leonard@bigbang.org is registered
-20190109054429 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054431  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="753759385066388773815"20190109054431 leonard@bigbang.org is registered
-20190109054431 leonard@bigbang.org is registered
-20190109054431 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054515 Servidor Proxy/Registrar apagado
-20190109054518  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="300243398271315399525"20190109054518 leonard@bigbang.org is registered
-20190109054518 leonard@bigbang.org is registered
-20190109054518 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054521  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="456987134053260135955"20190109054521 leonard@bigbang.org is registered
-20190109054521 leonard@bigbang.org is registered
-20190109054521 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054522  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="923297523461087066267"20190109054522 leonard@bigbang.org is registered
-20190109054522 leonard@bigbang.org is registered
-20190109054523 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054524  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="979615873750613873163"20190109054524 leonard@bigbang.org is registered
-20190109054524 leonard@bigbang.org is registered
-20190109054524 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109054555  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="282142222076512950507"20190109054555 leonard@bigbang.org is registered
-20190109054555 leonard@bigbang.org is registered
-20190109054555 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109054641 Servidor Proxy/Registrar apagado
-20190109055952 Servidor Proxy/Registrar apagado
-20190109060038 Servidor Proxy/Registrar apagado
-20190109060111 Servidor Proxy/Registrar apagado
-20190109060135 Servidor Proxy/Registrar apagado
-20190109060258 Servidor Proxy/Registrar apagado
-20190109061050  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="454546119027746780282"20190109061050 leonard@bigbang.org is registered
-20190109061050 leonard@bigbang.org is registered
-20190109061050 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109061106 Servidor Proxy/Registrar apagado
-20190109061110  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="571703249142441465421"20190109061110 leonard@bigbang.org is registered
-20190109061110 leonard@bigbang.org is registered
-20190109061110 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109061128 Servidor Proxy/Registrar apagado
-20190109061136  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="659485558423531793649"20190109061136 leonard@bigbang.org is registered
-20190109061136 leonard@bigbang.org is registered
-20190109061136 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109061234 Servidor Proxy/Registrar apagado
-20190109061359  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="430766765096553270038"20190109061359 leonard@bigbang.org is registered
-20190109061359 leonard@bigbang.org is registered
-20190109061359 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109061413 Servidor Proxy/Registrar apagado
-20190109061416  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="450540406688608437924"20190109061416 leonard@bigbang.org is registered
-20190109061416 leonard@bigbang.org is registered
-20190109061416 SIP/2.0 200 OK
-User leonard@bigbang.org is already registered20190109061439  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="122487540273890850869"20190109061439 penny@girlnextdoor.com is registered
-20190109061439 penny@girlnextdoor.com is registered
-20190109061439 SIP/2.0 200 OK
-User penny@girlnextdoor.com is already registered20190109061517 Servidor Proxy/Registrar apagado
-20190109061723 Servidor Proxy/Registrar apagado
-20190109061726  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="899996825404378839550"20190109061726 leonard@bigbang.org is registered
-20190109061726 leonard@bigbang.org is registered
-20190109061729  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="789884645134513933211"20190109061729 penny@girlnextdoor.com is registered
-20190109061729 penny@girlnextdoor.com is registered
-20190109061731  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="105535187779354024487"20190109061731 leonard@bigbang.org is registered
-20190109061731 leonard@bigbang.org is registered
-20190109061823 Servidor Proxy/Registrar apagado
-20190109061826  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="371706737854041729788"20190109061826 leonard@bigbang.org is registered
-20190109061826 leonard@bigbang.org is registered
-20190109061830  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="320760620253186962358"20190109061830 penny@girlnextdoor.com is registered
-20190109061830 penny@girlnextdoor.com is registered
-20190109061834  SIP/2.1 401 Unauthorized WWW Authenticate: Digest nonce="414883006106873363265"20190109061834 leonard@bigbang.org is registered
-20190109061834 leonard@bigbang.org is registered
-20190109061834 SIP/2.0 200 OK
-User leonard@bigbang.org is removed20190109185126 Servidor Proxy/Registrar apagado
-20190109185208 Servidor Proxy/Registrar apagado
-20190109185310 Servidor Proxy/Registrar apagado
-20190109185419 Servidor Proxy/Registrar apagado
-20190109201425 Servidor Proxy/Registrar apagado
-20190109201450 Servidor Proxy/Registrar apagado
-20190109201518 Servidor Proxy/Registrar apagado
-20190109201522 : INVITE sip:penny@girlnextdoor.com SIP/2.0
+20190110043539  SIP/2.1 401 Unauthorized
+ WWW Authenticate: Digest nonce="382956381917530537020"20190110043539 leonard@bigbang.org is registered
+20190110043539 leonard@bigbang.org is registered
+20190110043545 55043: INVITE sip:penny@girlnextdoor.com SIP/2.0
 Content-Type: application/sdp
 
 v=0
@@ -483,8 +10,19 @@ s=misesion
 t=0
 m=audio 23032 RTP
 
-20190109201543 Servidor Proxy/Registrar apagado
-20190109201546 : INVITE sip:penny@girlnextdoor.com SIP/2.0
+20190110043545 55043: SIP/2.0 200 OK
+20190110043556 55043: BYE sip:penny@girlnextdoor.com SIP/2.0
+
+20190110043556 :  SIP/2.0 200 OK20190110043604  SIP/2.1 401 Unauthorized
+ WWW Authenticate: Digest nonce="874441159841854757961"20190110043604 leonard@bigbang.org is registered
+20190110043604 leonard@bigbang.org is registered
+20190110043604 SIP/2.0 200 OK
+User leonard@bigbang.org is removed20190110043609 Servidor Proxy/Registrar apagado
+20190110043939 Servidor Proxy/Registrar apagado
+20190110043944  SIP/2.1 401 Unauthorized
+ WWW Authenticate: Digest nonce="754373687545670383833"20190110043944 leonard@bigbang.org is registered
+20190110043944 leonard@bigbang.org is registered
+20190110043947 35785: INVITE sip:penny@girlnextdoor.com SIP/2.0
 Content-Type: application/sdp
 
 v=0
@@ -493,8 +31,9 @@ s=misesion
 t=0
 m=audio 23032 RTP
 
-20190109201558 Servidor Proxy/Registrar apagado
-20190109201601 : INVITE sip:penny@girlnextdoor.com SIP/2.0
+20190110043947 35785: SIP/2.0 200 OK
+20190110043955 Servidor Proxy/Registrar apagado
+20190110044000 35785: INVITE sip:penny@girlnextdoor.com SIP/2.0
 Content-Type: application/sdp
 
 v=0
@@ -503,6 +42,21 @@ s=misesion
 t=0
 m=audio 23032 RTP
 
-20190109201642 Servidor Proxy/Registrar apagado
-20190109201821 Servidor Proxy/Registrar apagado
-20190109202023 Servidor Proxy/Registrar apagado
+20190110044000 35785: SIP/2.0 200 OK
+20190110044437 Servidor Proxy/Registrar apagado
+20190110044526  SIP/2.1 401 Unauthorized
+ WWW Authenticate: Digest nonce="634843946792333892368"20190110044526 leonard@bigbang.org is registered
+20190110044526 leonard@bigbang.org is registered
+20190110044528 40377: INVITE sip:penny@girlnextdoor.com SIP/2.0
+Content-Type: application/sdp
+
+v=0
+o=leonard@bigbang.org 127.0.0.1
+s=misesion
+t=0
+m=audio 23032 RTP
+
+20190110044528 40377: SIP/2.0 200 OK
+20190110044532 40377: BYE sip:penny@girlnextdoor.com SIP/2.0
+
+20190110044532 :  SIP/2.0 200 OK20190110044713 Servidor Proxy/Registrar apagado
