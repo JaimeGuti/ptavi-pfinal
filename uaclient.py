@@ -114,15 +114,16 @@ if __name__ == "__main__":
                 evento = "Starting..." + "\r\n\r\n"
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
-                log_fich(LOGFICH,fecha,evento)
+                log_fich(LOGFICH, fecha, evento)
 
                 expire = "Expires: " + OPTION + "\r\n"
-                LINE = METHOD + " sip:" + USER + ":" + PASSWORD + " SIP/2.0\r\n"
+                LINE = METHOD + " sip:" + USER + ":" + PASSWORD
+                LINE += " SIP/2.0\r\n"
                 send_line = LINE + expire + "\r\n"
                 my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
 
-                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY + ": "
                 evento += send_line
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
@@ -135,7 +136,7 @@ if __name__ == "__main__":
                 log_fich(LOGFICH, fecha, evento)
 
                 if data.decode('utf-8').split()[1] == '401':
-                    evento = "Received from "  + IP_REGPROXY + ":"
+                    evento = "Received from " + IP_REGPROXY + ":"
                     evento += PORT_REGPROXY + data.decode('utf-8') + "\r\n"
                     t = time.localtime(time.time())
                     fecha = time.strftime('%Y%m%d%H%M%S', t)
@@ -145,9 +146,11 @@ if __name__ == "__main__":
                     nonce_num = data.decode('utf-8').split('"')[1]
 
                     hash = hashlib.md5()
-                    hash.update(bytes(PASSWORD, 'utf-8') + bytes(nonce_num, 'utf-8'))
+                    hash.update(bytes(PASSWORD, 'utf-8'))
+                    hash.update(bytes(nonce_num, 'utf-8'))
                     hash = hash.hexdigest()
-                    authorized = 'Authorization: Digest response="' + hash + '"'
+                    authorized = 'Authorization: Digest response="' + hash
+                    authorized += '"'
                     send_line = LINE + expire + authorized + "\r\n"
                     my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
                     data = my_socket.recv(1024)
@@ -163,10 +166,11 @@ if __name__ == "__main__":
 
                 LINE = METHOD + " " + USER + "\r\n\r\n"
 
-                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY + ": " + LINE
+                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY + ": "
+                evento = LINE
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
-                log_fich(LOGFICH,fecha,evento)
+                log_fich(LOGFICH, fecha, evento)
 
                 session = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
                 session += "Content-Type: application/sdp\r\n\r\n" + "v=0\r\n"
@@ -190,21 +194,20 @@ if __name__ == "__main__":
                     print("Vamos a ejecutar", aEjecutar)
                     os.system(aEjecutar)
 
-
             elif METHOD == "BYE":
                 LINE = METHOD + "\r\n\r\n"
                 send_line = METHOD + " sip:" + OPTION + " SIP/2.0\r\n"
                 my_socket.send(bytes(send_line, 'utf-8') + b'\r\n')
                 data = my_socket.recv(1024)
 
-                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
+                evento = "Sent to " + IP_REGPROXY + ":" + PORT_REGPROXY + ": "
                 evento += LINE
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH, fecha, evento)
 
-                evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-                evento += data.decode('utf-8') + "\r\n\r\n"
+                evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+                evento += ": " + data.decode('utf-8') + "\r\n\r\n"
                 t = time.localtime(time.time())
                 fecha = time.strftime('%Y%m%d%H%M%S', t)
                 log_fich(LOGFICH, fecha, evento)
