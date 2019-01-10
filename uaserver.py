@@ -25,8 +25,8 @@ class EchoHandler(socketserver.DatagramRequestHandler):
         diferente = (line != "INVITE") or (line != "BYE") or (line != "ACK")
 
         if line == "INVITE":
-            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-            evento += line + "\r\n\r\n"
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+            evento += ": " + line + "\r\n\r\n"
             fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
@@ -41,8 +41,8 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             self.wfile.write(bytes(session, 'utf-8'))
 
         elif line == "ACK":
-            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-            evento += line + "\r\n\r\n"
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+            evento += ": " + line + "\r\n\r\n"
             fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
@@ -53,16 +53,16 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             os.system(aEjecutar)
 
         elif line == "BYE":
-            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-            evento += line + "\r\n\r\n"
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+            evento += ": " + line + "\r\n\r\n"
             fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
             self.wfile.write(b"SIP/2.0 200 OK")
 
         elif diferente:
-            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-            evento += line + "\r\n\r\n"
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+            evento += ": " + line + "\r\n\r\n"
             fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
@@ -70,8 +70,8 @@ class EchoHandler(socketserver.DatagramRequestHandler):
             self.wfile.write(b"SIP/2.0 405 Method Not Allowed")
 
         else:
-            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY+ ": "
-            evento += line + "\r\n\r\n"
+            evento = "Received from " + IP_REGPROXY + ":" + PORT_REGPROXY
+            evento += ": " + line + "\r\n\r\n"
             fecha = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             log_fich(LOGFICH, fecha, evento)
 
